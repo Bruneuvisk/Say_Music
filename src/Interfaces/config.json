@@ -1,0 +1,48 @@
+{
+  "token": "ODcwMjAwMTMzNjQyNDg1ODAy.YQJTBw.O62TXHsYuJIRS9hKMt4yDMVlCAo",
+  "prefix": "s*",
+  "color": "#f502e1",
+  "mongoURI": "mongodb+srv://saymusicbot:ExsJay3pnJgzJuqh@saymusic.gbb9h.mongodb.net/Say",
+  "ownerID": ["469661232153231385", "405173652049494026"],
+  "webhook": {
+    "id": "900228243465048124",
+    "token": "h2cyFobVveoFgj3UTaNvjqLFw_fHLtlpCbk0DFdKYUGDvPmn1wbNfiwX3pJm6Cepe-kc"
+  },
+  "spotify": {
+    "clientID": "fefacabcec2a442095b0b812b0f96fa9",
+    "clientSecret": "bc1dcda9fccc4d7997738ffef7a3875e"
+  },
+  "nodesPlayer": {
+    "erelaid": "Node 2",
+    "erelahost": "localhost",
+    "erelaport": 1000,
+    "erelapass": "168088bbBB"
+  },
+  "slashCommandsDirs": [
+    {
+      "Folder": "📋 informações",
+      "CmdName": "info",
+      "CmdDescription": "Lista meus comandos na área de informação"
+    },
+    {
+      "Folder": "⚙️ configurações",
+      "CmdName": "config",
+      "CmdDescription": "Lista meus comandos na área de configuração"
+    },
+    {
+      "Folder": "🎵 música",
+      "CmdName": "music",
+      "CmdDescription": "Lista meus comandos na área de música"
+    },
+    {
+      "Folder": "👀 filtros",
+      "CmdName": "filter",
+      "CmdDescription": "Lista meus comandos na área de filtros de música"
+    },
+    {
+      "Folder": "⚜️ fila",
+      "CmdName": "queue",
+      "CmdDescription": "Lista meus comandos na área de fila de música"
+    }
+  ]
+}

@@ -1,0 +1,854 @@
+{
+  "marcacao": {
+    "title": "¡Hola mi Ángel!",
+    "description1": "Hola <@{{membro}}>, ¡Soy hermana pequeña de mis hermanos Hércules, estoy totalmente hecho para alegrar tus oídos en tu servidor toco música totalmente buena, fui desarrollado en tres idiomas diferentes para cambiar el idioma solo el administrador usa **/config language** y lo configura, pero mi actual y principal es el 🇧🇷 porque fue desarrollado por brasileños!",
+    "description2": "**Para más preguntas sobre mí, entre en mi [Servidor de Soporte](https://discord.gg/xpYSzpJ8rK)**",
+    "description3": "Para acceder a mis comandos utilice: **/info help**"
+  },
+  "errorslash": {
+    "message": "{{emoji}} | Hola, compañero ya he terminado totalmente con los comandos **/**. \n\n Pero ten por seguro que todo el mundo comete errores, así que por favor amigo, para usar mis comandos usa \n ```/info help`` \n Si no puedes usar los comandos de **/** haz clic en el botón para añadir los comandos de / en tu servidor \n\n Si tienes algún problema repórtalo a mi servidor: https://discord.gg/xpYSzpJ8rK",
+    "button": "Haga clic aquí para añadir comandos de /"
+  },
+  "manumessage": {
+    "message": "{{emoji}} | {{membro}}, en este momento estoy en mantenimiento, el motivo lo encontrarán más abajo pero para saber más información entren en mi servidor de soporte [Haciendo click aquí](https://discord.gg/xpYSzpJ8rK) \n Razón: **{{reason}}**"
+  },
+  "footerembed": {
+    "message": "Solicitado por: {{membro}} | Say 💜"
+  },
+  "cooldown": {
+    "message": "{{emoji}} **|** Hola {{membro}}, así que ten cuidado al dar mis comandos repetidamente por favor espera, {{tempo}} segundo(s) antes de dar el comando `{{comando}}`."
+  },
+  "blacklist": {
+    "message": "{{emoji}} | {{membro}}, Hola amigo, lamentablemente estás en mi `Blacklist`, y no podrás acceder a mis comandos, si fue un error entra en mi servidor de soporte para revocarlo."
+  },
+  "channelsblock": {
+    "message": "{{emoji}} | Así que en este servidor tiene canales para acceder a mis comandos utilizan en esos canales: \n\n {{array}}"
+  },
+  "cmdblockk": {
+    "message": "{{emoji}} | Entonces {{membro}}, este comando que está intentando utilizar ha sido bloqueado en este servidor."
+  },
+  "djblock": {
+    "title": "{{emoji}} | Error",
+    "desc": "{{emoji}} | No tienes el role de DJ para realizar este comando, fue establecido en este servidor sólo para aquellos que son DJs. \n Role de DJ: {{roles}} \n\n {{emojicert}} | O pregunte ({{player}}), para utilizar este comando."
+  },
+  "erelaevents": {
+    "playercreate": {
+      "title": "{{emoji}} | Empecé a jugar en `{{channel}}`",
+      "desc": "{{emoji}}・**Comando realizado en:** <#{{channel}}>"
+    },
+    "playermove": {
+      "title": "{{emoji}} | La cola de canciones se ha cerrado",
+      "desc": "{{emoji}}・Dejé el canal `{{channel}}` porque estaba desconectado."
+    },
+    "trackstart": {
+      "errorde": "**El primero de la fila**",
+      "title": "{{emoji}} | {{track}}",
+      "desc": "{{emoji}}・Así que empecé a tocar esta canción debajo de su información sobre ella: \n\n {{emojis}}・Autor de la música: {{author}} \n {{emojise}}・Duración de la música: `{{format}}` \n {{emojiset}}・Posición en la cola: {{position}} \n {{emojiseta}}・Comando realizado por: <@{{membro}}> \n\n {{coroa}} Tu música está sonando ahora, voy a alegrar tus oídos, ¡espero que te haga más feliz!"
+    },
+    "trackstuck": {
+      "message": "{{emoji}} | **`{{music}}`** La canción que iba a sonar se saltó al quedarse atascada, así que lamentablemente tendré que saltarme esta canción lo siento amigo."
+    },
+    "trackerror": {
+      "message": "{{emoji}} | **`{{music}}`** La canción que iba a sonar se saltó porque dio error al reproducir esta canción, así que lamentablemente tengo que saltarme esta canción lo siento amigo."
+    },
+    "queueend": {
+      "error": "**No definido**",
+      "title": "{{emoji}} | La cola ha sido finalizada.",
+      "desc": "{{emoji}}・Así que amigo, tu cola de canciones estaba cerrada, así que tuve que dejar el canal: {{channel}}."
+    },
+    "channeldelete": {
+      "title": "{{emoji}} | He dejado de jugar",
+      "desc": "{{emoji}} | Desgraciadamente he dejado el canal porque se ha borrado, así que no puedo reproducir canciones."
+    },
+    "voicestate": {
+      "desmute": "{{emoji}} | No me degrade, esto es para mejorar la calidad del audio y brindarle una mejor experiencia así que por favor no me degrade, he vuelto a silenciar.",
+      "abandonowarn": "{{emoji}} | Así que estoy solo en la llamada, si nadie viene a escuchar mis canciones en 2 minutos voy a dejar la llamada.",
+      "abandonoreal": "{{emoji}} | Desgraciadamente pasaron 2 minutos y nadie me puso música, así que me retiré de la llamada."
+    }
+  },
+  "perms": {
+    "errormemberperm": {
+      "title": "{{emoji}} | Error de Permisos",
+      "description": "{{emoji}} **|** Hola {{membro}}, lamentablemente, no tienes los permisos suficientes, para ejecutar este comando \n Permisos requeridos: {{perms}}."
+    },
+    "errorclientperm": {
+      "title": "{{emoji}} | Error de Permisos",
+      "description": "{{emoji}} **|** Hola {{membro}}, por lo que no puedo obtener el permiso para realizar este comando \n Permisos requeridos: {{perms}}."
+    },
+    "ADMINISTRATOR": "`Administrador`",
+    "VIEW_AUDIT_LOG": "`Ver el registro de auditoría`",
+    "MANAGE_GUILD": "`Gestionar el servidor`",
+    "MANAGE_ROLES": "`Gestionar roles`",
+    "MANAGE_CHANNELS": "`Gestionar los canales`",
+    "KICK_MEMBERS": "`Expulsar miembros`",
+    "BAN_MEMBERS": "`Banear miembros`",
+    "CREATE_INSTANT_INVITE": "`Crear invitación`",
+    "CHANGE_NICKNAME": "`Cambiar Apodo`",
+    "MANAGE_NICKNAMES": "`Gestionar Apodos`",
+    "MANAGE_EMOJIS_AND_STICKERS": "`Gestionar emojis y stickers`",
+    "MANAGE_WEBHOOKS": "`Gestionar Webhooks`",
+    "VIEW_CHANNEL": "`Leer canales de texto y ver canales de voz`",
+    "SEND_MESSAGES": "`Enviar mensajes`",
+    "SEND_TTS_MESSAGES": "`Enviar mensajes en TTS`",
+    "MANAGE_MESSAGES": "`Gestionar mensajes`",
+    "EMBED_LINKS": "`Insertar enlaces`",
+    "ATTACH_FILES": "`Adjuntar archivos`",
+    "READ_MESSAGE_HISTORY": "`Leer el historial de mensajes`",
+    "MENTION_EVERYONE": "`Menciona a @everyone, @here y todos los roles`",
+    "USE_EXTERNAL_EMOJIS": "`Utilizar emojis externos`",
+    "ADD_REACTIONS": "`Añadir reacciones`",
+    "CONNECT": "`Conectar`",
+    "SPEAK": "`Habla`",
+    "STREAM": "`Corriente`",
+    "MUTE_MEMBERS": "`Silenciar a los miembros`",
+    "DEAFEN_MEMBERS": "`Miembros sordos`",
+    "MOVE_MEMBERS": "`Mover a los miembros`",
+    "USE_VAD": "`Utilizar la detección de voz`",
+    "PRIORITY_SPEAKER": "`Altavoz prioritario`",
+    "VIEW_GUILD_INSIGHTS": "`Ver las opiniones del gremio`",
+    "USE_APPLICATION_COMMANDS": "`Utilizar los comandos de la aplicación`",
+    "REQUEST_TO_SPEAK": "`Petición de palabra`",
+    "MANAGE_THREADS": "`Gestionar temas`",
+    "USE_PUBLIC_THREADS": "`Utilizar temas públicos`",
+    "USE_PRIVATE_THREADS": "`Utilizar temas privados`",
+    "CREATE_PUBLIC_THREADS": "`Creación de temas públicos`",
+    "CREATE_PRIVATE_THREADS": "`Creación de temas privados`",
+    "SEND_MESSAGES_IN_THREADS": "`Enviar mensajes en threads`",
+    "START_EMBEDDED_ACTIVITIES": "Iniciar las actividades integradas`",
+    "USE_EXTERNAL_STICKERS": "`Uso de pegatinas externas`"
+  },
+  "requiredroles": {
+    "title": "{{emoji}} | Error",
+    "description": "{{emoji}}・Para realizar este comando debe tener los roles requeridas \n {{emojiseta}}・Roles requeridos: {{cargos}}",
+    "unknown": "**No hay role**"
+  },
+  "alloweduserids": {
+    "title": "{{emoji}} | Error",
+    "description": "{{emoji}}・Así que este comando sólo se puede utilizar en mi lista de usuarios permitidos: \n {{emojiseta}}・Usuarios permitidos: {{users}}",
+    "unknown": "**No hay usuario**"
+  },
+  "help": {
+    "menuzin": {
+      "selector": "¿Qué categoría le gustaría ver en mi lista?",
+      "infotitle": "Comandos de información - [{{info}}]",
+      "infodesc": "Enumerar mis comandos de información",
+      "configtitle": "Comandos de configuración - [{{config}}]",
+      "configdesc": "Lista de mis comandos de configuración",
+      "musictitle": "Comandos de música - [{{music}}]",
+      "musicdesc": "Lista de mis comandos de música",
+      "filtertitle": "Comandos de filtros - [{{filter}}]",
+      "filterdesc": "Da acceso a los comandos de filtros de las canciones",
+      "queuetitle": "Comandos de la cola de canciones - [{{queue}}]",
+      "queuedesc": "Da acceso a los comandos de la cola de música",
+      "voltetitle": "Volver",
+      "voltedesc": "Volver al inicio del sistema de ayuda"
+    },
+    "namecommand": {
+      "error": "{{emoji}} **|** El comando que mencionas no existe en mi lista de comandos!",
+      "title": "{{emoji}} **|** Ayuda en {{command}}",
+      "name": "{{emoji}} **Nombre:** `{{command}}`",
+      "desc": "{{emoji}} **Descripción:** {{command}}",
+      "use": "{{emoji}} **Cómo utilizarlo:** `{{command}}`",
+      "cooldown": "{{emoji}} **Cooldown:** `{{command}} según(s)`"
+    },
+    "embedinicio": {
+      "title": "{{emoji}} | Comandos de Say",
+      "description": "{{emoji}}・Hola {{membro}}, así que para acceder a mis comandos por favor selecciona los menús de abajo con la categoría a la que deseas acceder y disfruta de mis muchos comandos para entretenerte y alegrar tus oídos:",
+      "descinfo": "{{emoji}}・Aquí estamos en la parte de **Información** de mis comandos: \n {{emojicert}}・En mi lista de comandos tengo actualmente **{{comandos}}** comandos en mi lista \n\n {{lista}} | Comandos de información: \n\n `{{comandosinfo}}` \n\n {{emojiss}} Utilice el comando `/info help [nombre_del_comando]` si desea conocer los detalles del comando.",
+      "desconfig": "{{emoji}}・Aquí estamos en la parte de **Configuración** de mis comandos: \n {{emojicert}}・En mi lista de comandos actualmente tengo **{{comandos}}** comandos en mi lista \n {{lista}} | Configuración Comandos: \n\n `{{comandosconfig}}` \n\n Utilice el comando `/info help [nombre_del_comando]` si desea conocer los detalles del comando.",
+      "descmusic": "{{emoji}}・Aquí estamos en la parte de **Música** de mis comandos: \n {{emojicert}}・En mi lista de comandos tengo actualmente **{{comandos}}** comandos en mi lista \n\n {{lista}} | Comandos musicales: \n\n `{{comandosmusic}}` \n\n {{emojiss}} Utilice el comando `/info help [nome_comando]` si quieres conocer los detalles del comando.",
+      "descfilter": "{{emoji}}・Aquí estamos en la parte de **Filtros** de mis comandos: \n {{emojicert}}・En mi lista de comandos tengo actualmente **{{comandos}}** comandos en mi lista \n\n {{lista}} | Comandos de filtro: \n\n `{{comandosfiltro}}` \n\n {{emojiss}} Utilice el comando `/info help [nome_comando]` si quieres conocer los detalles del comando.",
+      "descqueue": "{{emoji}}・Aquí estamos en la parte de **Cola de Música** de mis comandos: \n {{emojicert}}・En mi lista de comandos tengo actualmente **{{comandos}}** comandos en mi lista \n\n {{lista}} | Comandos de la cola de música: \n\n `{{comandosqueue}}` \n\n {{emojiss}} Utilice el comando `/info help [nome_comando]` si quieres conocer los detalles del comando."
+    },
+    "command": {
+      "ping": {
+        "description": "Demostrar la latencia y la API en mí"
+      },
+      "help": {
+        "description": "Muestra la lista de mis comandos que tengo"
+      },
+      "cmdblock": {
+        "description": "Puedes definir si quieres bloquear comandos o definir canales para realizar mis comandos, también puedes ver seleccionando lista puedes ver los comandos o canales, si quieres eliminar un comando o canal solo tienes que enviar un canal o comando que ya tenga en mi lista que yo mismo elimine"
+      },
+      "settings": {
+        "description": "Configura los ajustes de los djs para su servidor, puede configurar los roles de los djs y seleccionar qué comandos quiere asignar a los djs para eliminar el comando o role sólo tiene que enviar un role o comando que ya está en la lista"
+      },
+      "play": {
+        "description": "Reproduce música para alegrar tu oído sólo tienes que seleccionar un enlace o el nombre de la canción y empezará a sonar."
+      },
+      "language": {
+        "description": "Configure un idioma para que hable en mis mensajes en su servidor."
+      },
+      "avatar": {
+        "description": "Muestra el avatar de un miembro en el servidor o si seleccionas id_member, envía el id del miembro que quieres enviar para obtener su avatar."
+      },
+      "lavalink": {
+        "description": "Muestra la información sobre mi lavalink conectado"
+      },
+      "emojis": {
+        "description": "Enumera todos los emojis de tu servidor mostrando el nombre y el emoji"
+      },
+      "userinfo": {
+        "description": "Muestra la información de un miembro o por el id del miembro"
+      },
+      "servericon": {
+        "description": "Muestra el icono del servidor"
+      },
+      "serverinfo": {
+        "description": "Muestra información sobre el servidor en el que se realizó el comando"
+      },
+      "botinfo": {
+        "description": "Muestra mi información general en la discord"
+      },
+      "channelinfo": {
+        "description": "Muestra información sobre el canal mencionado"
+      },
+      "roleinfo": {
+        "description": "Muestra información sobre un role cotizado"
+      },
+      "private": {
+        "description": "Deja tu perfil en el comando userinfo private"
+      },
+      "invite": {
+        "description": "Invítame a tu servidor"
+      },
+      "8d": {
+        "description": "Activa el efecto 8d en la canción que se está reproduciendo"
+      },
+      "bassboost": {
+        "description": "Activa el efecto bassboost en la música que se está reproduciendo"
+      },
+      "karaoke": {
+        "description": "Activa el efecto karaoke en la música que se está reproduciendo"
+      },
+      "nightcore": {
+        "description": "Activa el efecto nightcore en la música que se está reproduciendo"
+      },
+      "pop": {
+        "description": "Activa el efecto pop en la música que se está reproduciendo"
+      },
+      "soft": {
+        "description": "Activa el efecto soft en la música que se está reproduciendo"
+      },
+      "treblebass": {
+        "description": "Activa el efecto treblebass en la música que se está reproduciendo"
+      },
+      "tremolo": {
+        "description": "Activa el efecto tremolo en la música que se está reproduciendo"
+      },
+      "vaporwave": {
+        "description": "Activa el efecto vaporwave en la música que se está reproduciendo"
+      },
+      "vibrato": {
+        "description": "Activa el efecto vibrato en la música que se está reproduciendo"
+      },
+      "lyrics": {
+        "description": "Muestra la letra de la canción que quieres o la que se está reproduciendo"
+      },
+      "clearqueue": {
+        "description": "Borra la cola de canciones que se están reproduciendo en el servidor"
+      },
+      "forward": {
+        "description": "Avanza la canción en un tiempo determinado"
+      },
+      "grab": {
+        "description": "Guarda la música que se reproduce en tus mensajes de discord"
+      },
+      "join": {
+        "description": "Ponerme en un canal de voz para tocar tus canciones"
+      },
+      "skipto": {
+        "description": "Salta a una determinada canción en la cola"
+      },
+      "loop": {
+        "description": "Hace que la música que está sonando se repita varias veces"
+      },
+      "loopqueue": {
+        "description": "Hace que la fila de canciones que se está reproduciendo se repita varias veces"
+      },
+      "move": {
+        "description": "Cambia la posición de una canción en la cola a otra posición"
+      },
+      "moveme": {
+        "description": "Haz que te mueva al canal de voz donde estoy jugando"
+      },
+      "nowplaying": {
+        "description": "Muestra información sobre la música que se está reproduciendo"
+      },
+      "pause": {
+        "description": "Pausa la música que está sonando actualmente"
+      },
+      "resume": {
+        "description": "Despausa la música que está en pausa"
+      },
+      "replay": {
+        "description": "Reproducir la música desde el principio"
+      },
+      "leave": {
+        "description": "Me hace abandonar el canal de voz desconectándome"
+      },
+      "shuffle": {
+        "description": "Revuelve la cola de música en la que se está reproduciendo"
+      },
+      "unshuffle": {
+        "description": "Restablecer la cola de música antigua que se ha barajado"
+      },
+      "skip": {
+        "description": "Omitir la canción que se estaba reproduciendo en la cola de música"
+      },
+      "rewind": {
+        "description": "Busca un número específico de segundos para volver a la canción"
+      },
+      "volume": {
+        "description": "Cambia el volumen de tu música de 0 a 150"
+      },
+      "seek": {
+        "description": "Cambia la posición de la música que se reproduce en segundos"
+      },
+      "removeduplicated": {
+        "description": "Elimina todas las canciones duplicadas en tu cola de música"
+      },
+      "removetrack": {
+        "description": "Eliminar una canción de la cola de música"
+      },
+      "playlist": {
+        "description": "Haz que reproduzca tu lista de reproducción a través del enlace de tu lista de reproducción"
+      },
+      "queue": {
+        "description": "Lista la cola actual de canciones en el servidor"
+      },
+      "queuestatus": {
+        "description": "Muestra el estado de la cola de música actual"
+      },
+      "search": {
+        "description": "Busca una canción en youtube para añadirla a tu cola de música"
+      },
+      "searchsc": {
+        "description": "Busca una canción en soundcloud para añadirla a tu cola de música"
+      },
+      "create": {
+        "description": "Crea tu propia lista de reproducción exclusiva sobre mí"
+      },
+      "addcurrenttrack": {
+        "description": "Añade la canción que se está reproduciendo a la lista de reproducción"
+      },
+      "addcurrentqueue": {
+        "description": "Añade a tu lista de reproducción la fila de canciones que se están reproduciendo actualmente"
+      },
+      "removesong": {
+        "description": "He eliminado una canción de tu lista de reproducción que estaba seleccionada"
+      },
+      "list": {
+        "description": "Enumera tu lista de reproducción que tienes en mí"
+      },
+      "delete": {
+        "description": "Borrar una lista de reproducción que tiene sobre mí"
+      },
+      "load": {
+        "description": "Poner alguna lista de reproducción tuya para jugar en el servidor"
+      },
+      "details": {
+        "description": "Muestra los detalles de tu lista de reproducción en mi"
+      }
+    }
+  },
+  "ping": {
+    "botping": {
+      "carregando": "Cargando...",
+      "waitmessage": "{{emoji}} | Esperando un ping...",
+      "message": "{{emoji}} | Mi ping actual: `{{ping}} ms`",
+      "result": "🏓 Pong!"
+    },
+    "apiping": {
+      "message": "{{emoji}} | Hacer ping a la API: `{{ping}} ms`",
+      "result": "🏓 Pong!"
+    }
+  },
+  "cmdblock": {
+    "commandsremove": {
+      "errorcommand": "{{emoji}} | El comando en el que se envió no existe en mi lista de comandos!",
+      "titleremocaocommand": "{{emoji}} | Eliminación de comandos",
+      "descremocaocommand": "{{emoji}} | Así que el comando enviado ya existe en mi lista por lo que lo eliminé de mi lista ahora es libre de ser utilizado en su servidor!",
+      "titlesucesseremove": "{{emoji}} | Bloqueo de comandos",
+      "descsucessremove": "{{emoji}} | El comando **{{command}}** ha sido añadido a mi lista y no puede ser utilizado en este servidor."
+    },
+    "channelsremove": {
+      "errorchannel": "{{emoji}} | El canal enviado no existe en su servidor, o no es un canal de texto!",
+      "titlechannel": "{{emoji}} | Eliminación de canales",
+      "deschannel": "{{emoji}} | Así que el canal enviado ya existe en mi lista, así que lo he eliminado de mi lista ahora es libre de ser utilizado en su servidor!",
+      "titlechannelsucess": "{{emoji}} | Establecer canal",
+      "deschannelsucess": "{{emoji}} | El canal **{{channel}}** se ha añadido a mi lista y sólo puede utilizar mis comandos en ella."
+    },
+    "listleave": {
+      "errorlista": "{{emoji}} | No hay ningún comando en mi lista, no hay manera de mostrar la lista!",
+      "errorlistachannel": "{{emoji}} | No hay ningún canal en mi lista, ¡no hay manera de mostrar la lista!",
+      "titlelista": "{{emoji}} | Lista de comandos bloqueados",
+      "desclista": "{{emoji}} | A continuación enumero los comandos que están desactivados en este servidor: \n\n {{lista}}",
+      "titlelistachannel": "{{emoji}} | Lista de canales",
+      "desclistachannel": "{{emoji}} | A continuación se enumeran los canales que van a ser utilizados mis comandos: \n\n {{lista}}"
+    },
+    "errorcria": "{{emoji}} | Seleccione sólo una opción a la vez, ya que no puedo procesar ambas al mismo tiempo."
+  },
+  "settings": {
+    "cargodjnull": "**No se ha establecido un trabajo de DJ**",
+    "djcommandnull": "**No hay comando para dj set**",
+    "errorcommand": "{{emoji}} | Este comando no pertenece a la categoría de música, por lo que no puede colocarse en la lista.",
+    "commandjremove": "{{emoji}} | Este comando ya estaba en la lista, así que lo he eliminado para ti.",
+    "commandadd": "{{emoji}} | El comando **{{comando}}** se ha añadido a mi lista y sólo puede ser utilizado por aquellos que tienen la posición de DJ establecido!",
+    "roleremove": "{{emoji}} | El puesto presentado ya estaba en mi lista, así que lo he eliminado por ti.",
+    "roleadd": "{{emoji}} | La role **<@&{{role}}>** se ha añadido como role de DJ, sólo los que tienen esta role pueden utilizar los comandos de DJ.",
+    "errorcria": "{{emoji}} | Seleccione sólo una opción a la vez ya que no puedo procesar ambas al mismo tiempo.",
+    "embedprincipal": {
+      "title": "{{emoji}} | Configuración de la música",
+      "desc": "{{emoji}} | A continuación se muestran los ajustes que se pueden asignar: \n\n {{emojiset}}・Roles de DJ: {{rolesmap}} \n {{emojiseta}}・Comandos sólo para DJs: {{comandmap}} \n\n {{emojicert}} | Para configurar los sistemas solo tienes que seleccionar las opciones cuando le das a /, las opciones son añadir una role de DJ, o añadir un comando que solo DJ puede usar, si quieres eliminar un comando o role envíalo de la misma manera que lo has añadido que lo eliminaré."
+    }
+  },
+  "play": {
+    "errorinot": "{{emoji}} | {{membro}}, necesitas estar en un canal de voz para que empiece a tocar canciones en este servidor.",
+    "errorbotcall": "{{emoji}} | {{membro}}, tienes que estar en un canal de voz en el que yo esté también, si no, no puedo jugar.",
+    "searchmusic": "{{emoji}} Investigar su música...",
+    "lavalinkerror": "{{emoji}} | {{membro}}, el servidor lavalink no está conectado, por lo que no puedo reproducir la música.",
+    "loadfailed": "{{emoji}} | Lamentablemente no pude reproducir esta canción, dio error al cargarla.",
+    "nomatches": "{{emoji}} | No pude encontrar nada en su búsqueda: **{{pesquisa}}**.",
+    "loadplaylist": "{{emoji}} | La lista de reproducción no está permitida en el comando de reproducción, para poner una lista de reproducción utilice: **/music playlist**",
+    "embed": {
+      "primefile": "**El primero de la cola**",
+      "content": "{{emoji}} | Encontré tu música",
+      "title": "{{emoji}} | He añadido a su cola {{music}}",
+      "desc": "{{emoji}}・Acabo de ponerlo en la cola, es música, ahora he puesto la información en la lista: \n\n {{emojis}} | Autor de la música: {{author}} \n {{emojise}} | Duración de la música: `{{duration}}` \n {{emojiset}} | Posición en la cola: {{position}} \n {{emojiseta}} | Comando realizado por: <@{{membro}}>"
+    }
+  },
+  "language": {
+    "embed": {
+      "desc": "{{emoji}} | Actualmente el idioma configurado en su servidor es **{{lang}}** \n\n {{emojiseta}} Para configurar el idioma seleccione el idioma al dar el comando seleccione el idioma que desea en el servidor."
+    },
+    "errorlang": "{{emoji}} | Este idioma ya está configurado actualmente en su servidor, no puede seleccionarlo de nuevo.",
+    "setlang": "{{emoji}} | Ok, acaba de poner mi idioma de este servidor a **{{lang}}**"
+  },
+  "avatar": {
+    "button": {
+      "label1": "Avatar global",
+      "label2": "Avatar del servidor"
+    },
+    "descmessage": "{{emoji}} | ¿Qué avatar quieres tomar del miembro?",
+    "errormessage": "{{emoji}} | El ID de socio enviado no es válido o no es un socio.",
+    "errortime": {
+      "title": "{{emoji}} | Error!",
+      "desc": "{{emoji}} | {{membro}},  __¡El tiempo para elegir se ha cerrado!__"
+    },
+    "embedavatarglobal": {
+      "author": "👥 | Avatar de: {{membro}}",
+      "desc": "Haga clic en [aquí]({{avatar}}) para descargar el avatar:"
+    }
+  },
+  "lavalink": {
+    "errorconect": "{{emoji}} | {{membro}}, El lavalink no está conectado, por lo que no puedo mostrar la información.",
+    "formatdate": "d [Días], h [Horas], m [Minutos], s [Segundos]",
+    "embed": {
+      "title": "{{emoji}} | Información sobre Lavalink",
+      "desc": "{{emoji}} | Información sobre lavalink: \n\n {{emojis}} **__Total de players conectados__**: `{{players}}` \n {{emojise}} **__Uptime__**: `{{uptime}}` \n {{emojiset}} **__Cantidad de RAM utilizada__**: `{{ram}} MB` \n {{emojiseta}} **__Cantidad de CPU utilizada__**: `{{cpu}}%`"
+    }
+  },
+  "emojis": {
+    "time": "¡Se acabó el tiempo!",
+    "button": {
+      "label1": "Adelante",
+      "label2": "Volver"
+    },
+    "embed": {
+      "title": "{{emoji}} | Emojis de {{guild}}"
+    }
+  },
+  "userinfo": {
+    "errormember": "{{emoji}} | El miembro citado no se considera miembro o no es válido.",
+    "embed": {
+      "title": "{{emoji}} | Información sobre {{membro}}",
+      "desc": "**{{emoji}}・A continuación se ofrece información sobre el miembro citado:** \n\n {{emojis}} | **__Etiqueta en lo discord__:** `{{membro}}` \n {{emojise}} | **__ID de discord__:** `{{id}}` \n {{emojiset}} | **__Cuenta creada desde__:** {{time}} \n {{emojiseta}} | **__¿Es un robot?__:** {{bot}}"
+    }
+  },
+  "servericon": {
+    "error": "{{emoji}} | El servidor donde quieres obtener el icono no tiene ningún icono.",
+    "embedicon": "🎖️ | icono del {{guild}}"
+  },
+  "serverinfo": {
+    "utils": {
+      "verification": {
+        "NONE": "No",
+        "LOW": "Bajo",
+        "MEDIUM": "Medio",
+        "HIGH": "Alto",
+        "VERY_HIGH": "Muy alta"
+      },
+      "filterLevels": {
+        "DISABLED": "Desactivado",
+        "MEMBERS_WITHOUT_ROLES": "Analizar los medios de comunicación de los miembros sin roles",
+        "ALL_MEMBERS": "Analizar a todos los miembros"
+      },
+      "mfalevels": {
+        "NONE": "No tiene",
+        "ELEVATED": "Alto"
+      },
+      "nsfwlevels": {
+        "DEFAULT": "No tiene",
+        "EXPLICIT": "Explícito",
+        "SAFE": "Normal",
+        "AGE_RESTRICTED": "Muy agresivo"
+      },
+      "filterregions": {
+        "en-US": "🇺🇸 | Estados Unidos",
+        "en-GB": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 | Inglaterra",
+        "zh-CN": "🇨🇳 | China",
+        "zh-TW": "🇨🇳 | China",
+        "cs": "🇨🇿 | Checa",
+        "da": "🇩🇰 | Dinamarca",
+        "nl": "🇳🇱 | Países Bajos",
+        "fr": "🇫🇷 | Francia",
+        "de": "🇩🇪 | Alemania",
+        "el": "🇬🇷 | Grecia",
+        "hu": "🇭🇺 | Hungría",
+        "it": "🇮🇹 | Italia",
+        "ja": "🇯🇵 | Japón",
+        "ko": "🇰🇷 | Corea del Sur",
+        "no": "🇳🇴 | Noruega",
+        "pl": "🇵🇱 | Polonia",
+        "pt-BR": "🇧🇷 | Brasil",
+        "ru": "🇷🇺 | Rusia",
+        "es-ES": "🇪🇸 | España",
+        "sv-SE": "🇸🇪 | Suecia",
+        "tr": "🇹🇷 | Turquía",
+        "bg": "🇧🇬 | Bulgaria",
+        "uk": "🇺🇦 | Ucrania",
+        "fi": "🇫🇮 | Finlandia",
+        "hr": "🇭🇷 | Croacia",
+        "ro": "🇷🇴 | Rumanía",
+        "lt": "🇱🇹 | Lituania"
+      }
+    },
+    "roleserver": {
+      "nenhumcargo": "**No hay role**",
+      "cargoserver": "Y más **{{role}}** roles."
+    },
+    "embedinfo": {
+      "waitmessage": "{{emoji}} Cargando información...",
+      "title": "🎖️ | Información sobre {{guild}}",
+      "desc": "{{emoji}} | **A continuación, la información sobre el servidor:** \n\n {{emojiseta}} **__Nombre__:** `{{name}}` \n {{emojiseta}} **__ID__:** `{{id}}` \n {{emojiseta}} **__Propietario__:** <@{{idmembro}}> ({{idmembro}}) \n {{emojiseta}} **__Región__:** {{region}} \n {{emojiseta}} **__nivel del Booster__:** {{levelbooster}} \n {{emojiseta}} **__Analizador de medios__:** {{filterlevel}} \n {{emojiseta}} **__Nivel de verificación__:** {{verilevels}} \n {{emojiseta}} **__NFSW nivel__:** {{nsfwlevel}} \n {{emojiseta}} **__MFA nivel__:** {{mfalevel}} \n {{emojiseta}} **__Fecha de creación__:** {{createdate}} \n {{emojiseta}} **__La fecha que ha introducido aquí:__** {{joindate}} \n\n **{{emojilista}} Información general:** \n {{emojiseta}} **__Total de roles__** {{rolesize}} \n {{emojiseta}} **__Total de canales:__** {{channelsize}} | **__Canal de texto:__** {{textsize}} | **__Canal de voz:__** {{voicesize}} | **__Categorías:__** {{categorysize}} \n {{emojiseta}} **__Total de Emojis:__** {{emojisize}} | **__Emojis animados:__** {{animatedemoji}} | **__Emojis parados__**: {{emojinot}} \n {{emojiseta}} **__Total de pegatinas:__** {{sticker}} \n {{emojiseta}} **__Total de miembros__**: {{membercount}} | **__Bots:__** {{botsize}} | **__Humanos:__** {{humanosize}} \n {{emojiseta}} **__Número de impulsores:__** {{boostercount}} \n\n **{{emojilista}} Roles** \n\n {{rolesreal}}"
+    }
+  },
+  "botinfo": {
+    "button": {
+      "label1": "Servidor de apoyo",
+      "label2": "Añadirme"
+    },
+    "embed": {
+      "daysformat": "d [Días], h [Horas], m [Minutos], s [Segundos]",
+      "title": "{{emoji}} | ¡Información sobre Yo!",
+      "desc": "{{emoji}}・Hola {{membro}}, Mi nombre es {{botname}} y soy un bot muy lindo y animado para alegrar tus oídos con mi música, puede parecer que estoy durmiendo es porque aún soy un bebé y duermo mucho más aún así trabajo muy bien soy hermana menor de mis hermanos Hércules, fui muy bien hecha y todos mis comandos muy bien hechos y con mucho cuidado, que me dio la idea de crearme fue **<@{{idowner}}>/`{{brunotag}}`/`{{idowner}}`**, recordando que aún estoy en mi fase **BETA** por lo que puede haber fallos en mis comandos/sistemas, a continuación información sobre mi estado en discord/vps:",
+      "field1name": "{{emoji}}・Mi equipo:",
+      "filed1desc": "**__Fundadores del proyecto__**: \n `{{tagbruno}}`/`{{brunoid}}` \n `{{coldztag}}`/`{{coldzid}}` \n\n **__Proyecto Adms__**: \n `{{gzntag}}`/`{{gznid}}` \n `{{bigtag}}`/`{{bigid}}` \n `{{lucktag}}`/`{{luckid}}` \n `{{babiztag}}`/`{{babizid}}` \n\n",
+      "filed2name": "{{emoji}}・Estado en Discordia",
+      "filed2desc": "__Total de usuarios:__ `{{users}}` \n __Total de servidores:__ `{{servers}}` \n __Total de comandos utilizados:__ `{{commanduses}}` \n __Total de canales:__ `{{canaistotais}}` \n __Canales de voz conectados:__ `{{channelconect}}`",
+      "filed3name": "{{emoji}}・Estado de Vps",
+      "filed3desc": "__Uso de la memoria:__ `{{memoryuse}}/{{memorytotal}}MB` \n __He estado despierto desde entonces:__ `{{uptime}}` \n __Versión de Discord.js:__ `v{{version}}` \n __Versión de Node.js:__ `{{versionode}}` \n __Bases de datos en uso:__ [Mongoose](https://www.mongodb.com/pt-br) \n __CPU:__ ```md\n{{cpu}}``` \n __Uso de la CPU:__ `{{usecpu}}%` \n __Bits:__ `{{bits}}` \n __Plataforma:__ ``{{plataform}}`` \n __Latencia de la API:__ `{{ping}}ms`"
+    }
+  },
+  "channelinfo": {
+    "typecountes": {
+      "GUILD_VOICE": "Voz",
+      "GUILD_TEXT": "Texto",
+      "GUILD_CATEGORY": "Categoría",
+      "GUILD_NEWS": "Noticias",
+      "GUILD_STORE": "Tienda",
+      "GUILD_NEWS_THREAD": "Noticias Conversaciones",
+      "GUILD_PUBLIC_THREAD": "Conversación pública",
+      "GUILD_PRIVATE_THREAD": "Chat privado",
+      "GUILD_STAGE_VOICE": "Escenario",
+      "UNKNOWN": "No definido"
+    },
+    "embed": {
+      "notpossui": "No tiene",
+      "title": "{{emoji}} | Información sobre el canal: {{channel}}",
+      "filed1name": "**__{{emoji}} Nombre:__**",
+      "filed2name": "**__{{emoji}} ID:__**",
+      "filed3name": "**__{{emoji}} Tipo:__**",
+      "filed4name": "**__{{emoji}} Fecha de creación:__**",
+      "filed5name": "**__{{emoji}} Posición:__**",
+      "filed6name": "**__{{emoji}} Tema:__**",
+      "filed7name": "**__{{emoji}} ¿NSFW?:__**",
+      "filed8name": "**__{{emoji}} Límite del usuario:__**",
+      "filed9name": "**__{{emoji}} Categoría a la que pertenece:__**",
+      "filed10name": "**__{{emoji}} Visible:__**"
+    }
+  },
+  "roleinfo": {
+    "embed": {
+      "title": "{{emoji}} | Información sobre el role: {{cargo}}",
+      "filed1name": "**__{{emoji}} Nombre:__**",
+      "filed2name": "**__{{emoji}} ID:__**",
+      "filed3name": "**__{{emoji}} Color:__**",
+      "filed4name": "**__{{emoji}} Fecha de creación:__**",
+      "filed5name": "**__{{emoji}} Posición:__**",
+      "filed6name": "**__{{emoji}} Miembros en role:__**",
+      "filed7name": "**__{{emoji}} Hasteado:__**",
+      "filed8name": "**__{{emoji}} Mencionable:__**",
+      "filed9name": "**__{{emoji}} Integración:__**",
+      "filed10name": "**__{{emoji}} Permisos:__**"
+    }
+  },
+  "private": {
+    "trueprivate": "{{emoji}} | Tu perfil en el comando userinfo es ahora oficialmente privado.",
+    "falseprivate": "{{emoji}} | Su perfil en el comando userinfo ya está oficialmente liberado."
+  },
+  "invite": {
+    "embed": {
+      "title": "{{emoji}} | Invítame a tu servidor.",
+      "desc": "{{emoji}} | Para añadirme a su servidor [Haga clic aquí](https://discord.com/api/oauth2/authorize?client_id={{clientid}}&permissions={{perms}}&scope=bot%20applications.commands)"
+    }
+  },
+  "8d": {
+    "notocad": "{{emoji}} | No hay nada que jugar en este servidor.",
+    "notchannel": "{{emoji}} | {{membro}}, necesitas estar en un canal de voz para que empiece a tocar canciones en este servidor.",
+    "notbot": "{{emoji}} | {{membro}}, tienes que estar en un canal de voz en el que yo esté también, sino no podré jugar.",
+    "8desactivo": "{{emoji}} | El 8D de la canción ha sido `desactivado`",
+    "8dactivo": "{{emoji}} | El 8D de la canción ha sido `activado`."
+  },
+  "bassboost": {
+    "desativo": "{{emoji}} | El bassboost de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El bassboost de la canción fue `activado`"
+  },
+  "karaoke": {
+    "desativo": "{{emoji}} | El karaoke de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El karaoke de la canción fue `activado`"
+  },
+  "nightcore": {
+    "desativo": "{{emoji}} | El nightcore de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El nightcore de la canción fue `activado`"
+  },
+  "pop": {
+    "desativo": "{{emoji}} | El pop de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El pop de la canción fue `activado`"
+  },
+  "soft": {
+    "desativo": "{{emoji}} | El soft de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El soft de la canción fue `activado`"
+  },
+  "treblebass": {
+    "desativo": "{{emoji}} | El treblebass de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El treblebass de la canción fue `activado`"
+  },
+  "tremolo": {
+    "desativo": "{{emoji}} | El tremolo de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El tremolo de la canción fue `activado`"
+  },
+  "vaporwave": {
+    "desativo": "{{emoji}} | El vaporwave de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El vaporwave de la canción fue `activado`"
+  },
+  "vibrato": {
+    "desativo": "{{emoji}} | El vibrato de la canción fue `desactivado`",
+    "ativo": "{{emoji}} | El vibrato de la canción fue `activado`"
+  },
+  "lyrics": {
+    "errornot": "{{emoji}} | No hay nada reproduciéndose en este servidor, o no has pegado ninguna música.",
+    "notlyrics": "{{emoji}} | No pude encontrar la letra de esta canción `{{title}}`",
+    "embed": {
+      "title": "{{emoji}} | La letra de la canción: `{{title}}`"
+    }
+  },
+  "clearqueue": {
+    "errornoqueue": "{{emoji}} | No hay canciones en la cola de espera.",
+    "sucess": "{{emoji}} | La cola de música de este servidor se ha borrado con éxito."
+  },
+  "forward": {
+    "sucess": "{{emoji}} | La canción actual fue a la posición solicitada y ahora está en `{{duration}}`"
+  },
+  "grab": {
+    "embed": {
+      "title": "{{emoji}} | Su música fue salvada",
+      "desc": "{{emoji}}・A continuación se muestra la información de su canción guardada: \n\n ⌛ | Duración: `{{duration}}` \n 🎵 | El autor: `{{autor}}` \n ▶ | Comando: `/music play {{uri}}` \n 🔎 | Salvado en el canal: <#{{channelid}}>"
+    },
+    "errormessage": "{{emoji}} | Tus mensajes directos están bloqueados y no puedo enviarte la música.",
+    "sucess": "{{emoji}} | Por favor amigo, revisa tus mensajes directos."
+  },
+  "join": {
+    "errornotcall": "{{emoji}} | Así que amigo, ya estoy en el canal de voz: `{{voice}}`!",
+    "errornot": "No pude encontrar el canal",
+    "sucess": "{{emoji}} | Entré en el canal de voz {{channel}}, ponme música."
+  },
+  "skipto": {
+    "errormano": "{{emoji}} | La canción en la que se citaba no existe en mi cola de música.",
+    "sucess": "{{emoji}} | Se saltaron `{{number}}` canciones en mi cola."
+  },
+  "loop": {
+    "sucess": "{{emoji}} | Éxito, El bucle de música es ahora {{looprepeat}} {{queuerepeat}}",
+    "desativoloop": "{{emoji}} desactivado",
+    "ativoloop": "{{emoji}} activado",
+    "loopqueuemusic": ", Y el bucle en su cola de música era **desactivado**"
+  },
+  "loopqueue": {
+    "sucess": "{{emoji}} | Éxito, El bucle de la cola de canciones es ahora {{queuerepeat}} {{looprepeat}}",
+    "loopqueuemusic": ", Y el bucle de música normal era **desativado**"
+  },
+  "move": {
+    "errornoposition": "{{emoji}} | La posición enviada como la de la canción que desea recoger no existe en mi cola de música actual.",
+    "sucess": "{{emoji}} | Lo hice, moví tu canción actual de la posición `{{to}}` a la posición `{{from}}`."
+  },
+  "moveme": {
+    "notchannel": "{{emoji}} | No estoy conectado en ningún canal de voz, así que no puedo moverte.",
+    "notuserlimit": "{{emoji}} | El canal de voz en el que estoy está lleno, así que no puedo moverte.",
+    "ischannel": "{{emoji}} | Ya estoy en el canal de voz en el que eres tonto.",
+    "sucess": "{{emoji}} | Allí, me las arreglé para moverte al canal `{{channel}}`"
+  },
+  "nowplaying": {
+    "errornotcurrent": "{{emoji}} | No tiene nada en la cola de música.",
+    "embed": {
+      "author": "Música que está sonando ahora:",
+      "filed1name": "{{emoji}}・Duración:",
+      "filed2name": "{{emoji}}・El autor:",
+      "filed3name": "{{emoji}}・Total de canciones en la cola:",
+      "filed4name": "{{emoji}}・Progresión:"
+    }
+  },
+  "pause": {
+    "notplaying": "{{emoji}} | La canción que intentas pausar ya está en pausa, así que utiliza **/music resume**.",
+    "sucess": "{{emoji}} | Lo hice, pausé con éxito su música."
+  },
+  "resume": {
+    "errorplaying": "{{emoji}} | La música ya se está reproduciendo normalmente si quieres pausarla, utiliza **/music pause**.",
+    "sucess": "{{emoji}} | Me las arreglé, con éxito poner su música para jugar de nuevo."
+  },
+  "replay": {
+    "sucess": "{{emoji}} | Ahora he puesto la música al principio de la misma."
+  },
+  "leave": {
+    "sucess": "{{emoji}} | Con éxito, me retiré del canal de voz en el que tocaba mis canciones."
+  },
+  "shuffle": {
+    "sucess": "{{emoji}} | Lo he hecho, tu cola de canciones ha sido barajada por completo y con éxito."
+  },
+  "unshuffle": {
+    "errornot": "{{emoji}} | Su cola de música no ha sido barajada así que no puedo restaurar.",
+    "sucess": "{{emoji}} | Lo hice, restauré con éxito tu cola de música."
+  },
+  "skip": {
+    "sucess": "{{emoji}} | Me salté la canción que se estaba reproduciendo con éxito."
+  },
+  "rewind": {
+    "sucess": "{{emoji}} | Lo hice, tu música estaba encendida `{{time}}` segundos, está ahora en {{duration}}"
+  },
+  "volume": {
+    "error": "{{emoji}} | El número del volumen enviado debe ser de `0 a 150`.",
+    "sucess": "{{emoji}} | El volumen de su canción ha sido cambiado a `{{vol}}`"
+  },
+  "seek": {
+    "error": "{{emoji}} | Sólo se puede cambiar la melodía de `0` a `{{duration}}`",
+    "embed": {
+      "title": "{{emoji}} | Lo hice, la música se cambió a: {{time}}",
+      "desc": "{{emoji}} | Progreso: \n {{bar}}"
+    }
+  },
+  "removeduplicated": {
+    "sucess": "{{emoji}} | Lo hice, borré todas las canciones duplicadas de tu cola de música."
+  },
+  "removetrack": {
+    "errornot": "{{emoji}} | El número de canción enviado no existe en mi cola de música.",
+    "sucess": "{{emoji}} | La música de la posición `{{music}}` ha sido eliminado con éxito de la cola."
+  },
+  "playlist": {
+    "search": "{{emoji}} Buscando tu lista de reproducción...",
+    "content": "{{emoji}} He encontrado tu lista de reproducción",
+    "errornot": "{{emoji}} | No está permitido utilizar la búsqueda de música en el comando de lista de reproducción, utilice **/music play** ou **/music search**.",
+    "embed": {
+      "subject": "en la cola",
+      "title": "{{emoji}} | Añadido a la lista de reproducción {{playlist}}",
+      "desc": "{{emoji}}・A continuación se muestra la información de la lista de reproducción que se está reproduciendo ahora: \n\n {{emojiseta}} | Duración de la lista de reproducción: `{{duration}}` \n {{emojiseta}} | Número de canciones en la cola: {{lista}} \n {{emojiseta}} | Mando realizado por: <@{{author}}>"
+    }
+  },
+  "queue": {
+    "filearray": " **|** Comandado por: ",
+    "embedinicio": {
+      "title": "{{emoji}} | Cola de canciones",
+      "desc": "{{emoji}}・**__A continuación se muestra la información de su cola de música:__** \n\n {{emojiseta}} | **__Música que está sonando:__** [{{titleplayer}}]({{uriplayer}}) \n {{emojiseta}} | **__Dominio de la música interpretada:__** {{requester}} \n {{emojiseta}} | **__Progresión de la música:__** \n {{bar}}",
+      "desc2": "{{emoji}}・**__Actualmente jugando:__** \n [{{titleplayer}}]({{uriplayer}}) \n\n {{emojiseta}}・**__Luego hay que jugar:__** \n{{description}}\n\n {{emojiseta}} | **__Total de canciones:__** `{{sizequeue}}` \n {{emojiseta}} | **__Tiempo total de cola:__** `{{duration}}` \n {{emojiseta}} | **__Mando realizado:__** {{requester}} \n {{emojiseta}} | **__Duração atual da música:__** \n {{bar}}"
+    }
+  },
+  "queuestatus": {
+    "embed": {
+      "title": "{{emoji}} | Conectado en `🔈{{name}}`",
+      "desc": "**{{emoji}}・Mis comandos se utilizan actualmente en el canal de texto `#{{textname}}` y la cola de música tiene actualmente `{{length}} Canciones`**",
+      "filed1name": "{{emoji}} | **__Volumen de la música__**",
+      "filed2name": "{{emoji}} | **__Filtros activados__**",
+      "filed3name": "{{emoji}} | **__Bucle de cola__**",
+      "filed4name": "{{emoji}} | **__Bucle musical__**",
+      "filed5name": "{{emoji}} | **__Reproducir ahora__**",
+      "filed6name": "{{emoji}} | **__Progresión__**"
+    }
+  },
+  "search": {
+    "searcksls": "{{emoji}} Investigar su música...",
+    "embedsearch": {
+      "title": "{{emoji}} | Resultados de la búsqueda de: `{{music}}`",
+      "desc": "{{emoji}}・Debajo de los resultados de lo buscado, para seleccionar sólo tienes que escribir el número correspondiente a cada canción y si quieres cancelar la búsqueda escribe en el chat `cancel` \n\n {{result}}"
+    },
+    "embederrortime": {
+      "title": "{{emoji}} | Se ha superado el límite de tiempo",
+      "desc": "{{emoji}} | Has tardado demasiado en elegir tu música."
+    },
+    "embedcancel": {
+      "desc": "{{emoji}} | Has cancelado la búsqueda de música."
+    },
+    "embednotindex": {
+      "desc": "{{emoji}} | El número de canción enviado no es válido."
+    },
+    "embednottrack": {
+      "desc": "{{emoji}} | No se ha encontrado nada en su búsqueda {{music}}"
+    }
+  },
+  "create": {
+    "errorlength": "{{emoji}} | El nombre máximo de tu lista de reproducción no debe tener más de 10 caracteres.",
+    "errorname": "{{emoji}} | El nombre enviado ya existe una lista de reproducción con ese nombre.",
+    "sucess": "{{emoji}} | Ahora su lista de reproducción de canciones se ha creado con el nombre `{{queue}}`"
+  },
+  "addcurrenttrack": {
+    "errornot": "{{emoji}} | No hay nada que se esté reproduciendo en la cola de música.",
+    "namequeue": "{{emoji}} | No hay ninguna lista de reproducción suya llamada `{{name}}`",
+    "embed": {
+      "title": "{{emoji}} | Lo hice, añadí la música `{{title}}` en su lista de reproducción `{{name}}` con éxito.",
+      "desc": "{{emoji}} | Ahora en tu lista de reproducción tienes un total de `{{musics}}` canciones."
+    }
+  },
+  "addcurrentqueue": {
+    "errornot": "{{emoji}} | Tu cola de música está actualmente vacía.",
+    "embed": {
+      "title": "{{emoji}} | Lo hice, añadí `{{tracks}}` canciones en su lista de reproducción `{{name}}`",
+      "desc": "{{emoji}}・En tu lista de reproducción tienes ahora una serie de `{{total}}` canciones."
+    }
+  },
+  "removesong": {
+    "errorum": "{{emoji}} | El número enviado no es un número que esté en su lista de reproducción de música.",
+    "errordois": "{{emoji}} | El número de canción enviado no existe en su lista de reproducción.",
+    "embed": {
+      "title": "{{emoji}} | Lo hice, quité la música {{music}} de su lista de reproducción `{{name}}`",
+      "desc": "{{emoji}}・Ahora en tu lista de reproducción tienes `{{lista}}` canciones hoy en día."
+    }
+  },
+  "list": {
+    "errorqueue": "{{emoji}} | No tienes ninguna lista de reproducción creada sobre mí.",
+    "format": "**❯ {{queue}}** | `{{len}} Canciones`\n",
+    "embed": {
+      "title": "{{emoji}} | Sus listas de reproducción",
+      "desc": "{{emoji}} | A continuación, enumero los nombres y la cantidad de canciones que tienen en sus listas de reproducción: \n\n {{desc}}"
+    }
+  },
+  "delete": {
+    "sucess": "{{emoji}} | Lo hice, borré tu lista de reproducción `{{name}}` con éxito."
+  },
+  "load": {
+    "errornot": "{{emoji}} | Éxito, estoy poniendo `{{len}}` canciones en su cola de música actual, esto puede tomar un tiempo dependiendo de cuántas canciones tiene en su lista de reproducción."
+  },
+  "details": {
+    "embed": {
+      "title": "{{emoji}} | Información sobre la lista de reproducción `{{queue}}`",
+      "desc": "{{emoji}} | A continuación voy a mostrar las canciones que tiene en su lista de reproducción: \n\n {{desc}}"
+    }
+  }
+}

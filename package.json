@@ -1,0 +1,48 @@
+{
+  "name": "saymusic",
+  "version": "1.0.0",
+  "description": "Um bot de música totalmente funcional usando lavalink",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "music",
+    "say",
+    "discordjs",
+    "lavalink",
+    "letsgo",
+    "uau",
+    "javascript",
+    "nodejs",
+    "exquece",
+    "cocorico"
+  ],
+  "author": "! RD ๖ۣۜBruno#1000",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "colors": "^1.4.0",
+    "cpu-stat": "^2.0.1",
+    "currency-formatter": "^1.5.9",
+    "discord.js": "^13.3.0",
+    "erela.js": "^2.3.3",
+    "erela.js-deezer": "^1.0.7",
+    "erela.js-facebook": "^1.0.4",
+    "erela.js-filters": "^1.2.6",
+    "erela.js-spotify": "^1.2.0",
+    "glob": "^7.2.0",
+    "lodash": "^4.17.21",
+    "lyrics-finder": "^21.7.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^6.0.11",
+    "path": "^0.12.7",
+    "pretty-ms": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "prettier": "2.4.1"
+  }
+}
