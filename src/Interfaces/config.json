@@ -4,6 +4,11 @@
   "color": "#f502e1",
   "mongoURI": "mongodb+srv://saymusicbot:ExsJay3pnJgzJuqh@saymusic.gbb9h.mongodb.net/Say",
   "ownerID": ["469661232153231385", "405173652049494026"],
+  "tokenvoid": "VOID_0Q0m6AhGXJvwhILjbolh9O0wx1bdYE9Bk4cmKr5RvFct6BGz",
+  "webhookvoid": {
+    "id": "905863689264037888",
+    "token": "Vv5K6_YQjuR-FN2Y2pdtUMhQcYMhipazcJ3eJ4zgAQ6sAZnL1w7YH3sU2k8RbOqiBtD_"
+  },
   "webhook": {
     "id": "900228243465048124",
     "token": "h2cyFobVveoFgj3UTaNvjqLFw_fHLtlpCbk0DFdKYUGDvPmn1wbNfiwX3pJm6Cepe-kc"

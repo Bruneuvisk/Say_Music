@@ -2,6 +2,8 @@ const c = require('colors')
 const Client = require('../Database/Schemas/Client')
 const Guild = require('../Database/Schemas/Guild')
 const Queue = require('../Database/Schemas/Queue')
+const fetch = require("node-fetch")
+const config = require("../Interfaces/config.json")
 
 module.exports = async (client) => {
   const ping = new Date()
@@ -52,4 +54,15 @@ module.exports = async (client) => {
       `[LOGIN] - O Bot ${client.user.tag} foi inicializada em ${client.guilds.cache.size} servidores e ${client.users.cache.size} usuários me ouvindo!`
     )
   )
+
+  await fetch(`https://api.voidbots.net/bot/stats/${client.user.id}`, {
+    method: "POST",
+    headers: { 
+      Authorization: config.tokenvoid,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({"server_count": client.guilds.cache.size })
+  }).then(response => response.text())
+  .then(console.log).catch(console.error);
+
 }

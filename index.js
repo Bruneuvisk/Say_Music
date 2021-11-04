@@ -39,5 +39,6 @@ loadCommands()
 startMongoose()
 require('./src/Struturas/SlashHandler')(client)
 require('./src/Struturas/MusicConfig/CreateMusic')(client)
+require('./src/Struturas/Botlist/VoidBots')(client)
 
 client.login()
