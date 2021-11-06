@@ -40,6 +40,7 @@ module.exports = {
       createdTimestamp,
     } = interaction
     const { guild } = member
+    const { channel } = interaction.member.voice;
 
     let player = await client.manager.players.get(interaction.guild.id)
 
@@ -58,8 +59,7 @@ module.exports = {
     }
 
     if (
-      interaction.guild.me.voice.channelId &&
-      interaction.member.voice.channelId != interaction.guild.me.voice.channelId
+      player && channel.id !== player.voiceChannel
     ) {
       return interaction.reply({
         ephemeral: true,

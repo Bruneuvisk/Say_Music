@@ -43,6 +43,7 @@ module.exports = {
     let SearchString = options.getString('playlist_url')
     let player = await client.manager.players.get(interaction.guild.id)
     let CheckNode = client.manager.nodes.get(config.nodesPlayer.erelaid)
+    const { channel } = interaction.member.voice;
 
     if (!interaction.member.voice.channel) {
       return interaction.reply({
@@ -51,18 +52,8 @@ module.exports = {
       })
     }
 
-    if (
-      interaction.guild.me.voice.channelId &&
-      interaction.member.voice.channelId != interaction.guild.me.voice.channelId
-    ) {
-      return interaction.reply({
-        ephemeral: true,
-        content: `${t('commands:8d:notbot', { emoji: emojis.emojierror, membro: interaction.member })}`,
-      })
-    }
-
     if (!CheckNode || !CheckNode.connected) {
-      return interaction.editReply({
+      return interaction.reply({
         ephemeral: true,
         content: `${t('commands:play:lavalinkerror', { emoji: emojis.emojierror, membro: interaction.member })}`,
       })
@@ -79,6 +70,16 @@ module.exports = {
 
     if (player.state != 'CONNECTED') {
       await player.connect()
+    }
+    
+    if (
+      player && channel.id !== player.voiceChannel
+    ) {
+      if (!player.queue.current) player.destroy()
+      return interaction.reply({
+        ephemeral: true,
+        content: `${t('commands:8d:notbot', { emoji: emojis.emojierror, membro: interaction.member })}`,
+      })
     }
 
     await interaction.reply({ content: `${t('commands:playlist:search', { emoji: emojis.emojicarregando })}` })

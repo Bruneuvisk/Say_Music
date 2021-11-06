@@ -46,6 +46,7 @@ module.exports = {
     const { guild } = member
 
     let player = await client.manager.players.get(interaction.guild.id)
+    const { channel } = interaction.member.voice;
 
     const queuesMember = await require('mongoose')
       .connection.collection('queues')
@@ -65,8 +66,7 @@ module.exports = {
     }
 
     if (
-      interaction.guild.me.voice.channelId &&
-      interaction.member.voice.channelId != interaction.guild.me.voice.channelId
+      player && channel.id !== player.voiceChannel
     ) {
       return interaction.reply({
         ephemeral: true,

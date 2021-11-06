@@ -34,6 +34,7 @@ module.exports = {
   ],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
     let player = await client.manager.players.get(interaction.guild.id)
+    const { channel } = interaction.member.voice;
 
     if (!player) {
       return interaction.reply({
@@ -50,8 +51,7 @@ module.exports = {
     }
 
     if (
-      interaction.guild.me.voice.channelId &&
-      interaction.member.voice.channelId != interaction.guild.me.voice.channelId
+      player && channel.id !== player.voiceChannel
     ) {
       return interaction.reply({
         ephemeral: true,

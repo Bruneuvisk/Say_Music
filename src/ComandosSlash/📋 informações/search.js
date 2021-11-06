@@ -51,22 +51,13 @@ module.exports = {
     const { guild } = member
 
     let player = await client.manager.players.get(interaction.guild.id)
+    const { channel } = interaction.member.voice;
     const argsMusic = options.getString('nome_ou_url')
 
     if (!interaction.member.voice.channel) {
       return interaction.reply({
         ephemeral: true,
         content: `${t('commands:8d:notchannel', { emoji: emojis.emojierror, membro: interaction.member })}`,
-      })
-    }
-
-    if (
-      interaction.guild.me.voice.channelId &&
-      interaction.member.voice.channelId != interaction.guild.me.voice.channelId
-    ) {
-      return interaction.reply({
-        ephemeral: true,
-        content: `${t('commands:8d:notbot', { emoji: emojis.emojierror, membro: interaction.member })}`,
       })
     }
 
@@ -81,6 +72,15 @@ module.exports = {
 
     if (player.state != 'CONNECTED') {
       await player.connect()
+    }
+
+    if (
+      player && channel.id !== player.voiceChannel
+    ) {
+      return interaction.reply({
+        ephemeral: true,
+        content: `${t('commands:8d:notbot', { emoji: emojis.emojierror, membro: interaction.member })}`,
+      })
     }
 
     let embedsearch = new EmbedSay(interaction.member.user, t).setDescription(

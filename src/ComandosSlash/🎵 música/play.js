@@ -39,6 +39,7 @@ module.exports = {
       createdTimestamp,
     } = interaction
     const { guild } = member
+    const { channel } = interaction.member.voice;
 
     if (!interaction.member.voice.channel) {
       return interaction.reply({
@@ -47,22 +48,12 @@ module.exports = {
       })
     }
 
-    if (
-      interaction.guild.me.voice.channelId &&
-      interaction.member.voice.channelId != interaction.guild.me.voice.channelId
-    ) {
-      return interaction.reply({
-        ephemeral: true,
-        content: `${t('commands:play:errorbotcall', { emoji: emojis.emojierror, membro: interaction.member })}`,
-      })
-    }
-
     let SearchString = options.getString('nome_ou_url')
 
     let CheckNode = client.manager.nodes.get(config.nodesPlayer.erelaid)
 
     if (!CheckNode || !CheckNode.connected) {
-      return interaction.editReply({
+      return interaction.reply({
         ephemeral: true,
         content: `${t('commands:play:lavalinkerror', { emoji: emojis.emojierror, membro: interaction.member })}`,
       })
@@ -81,6 +72,16 @@ module.exports = {
 
     if (player.state != 'CONNECTED') {
       await player.connect()
+    }
+
+    if (
+      player && channel.id !== player.voiceChannel
+    ) {
+      if (!player.queue.current) player.destroy()
+      return interaction.reply({
+        ephemeral: true,
+        content: `${t('commands:play:errorbotcall', { emoji: emojis.emojierror, membro: interaction.member })}`,
+      })
     }
 
     if (SearchString.includes('youtu')) {
