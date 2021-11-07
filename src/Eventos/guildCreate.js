@@ -36,10 +36,6 @@ module.exports = async (client, guild) => {
     idServer: guild.id,
   })
 
-  let guilch = client.guilds.cache.get("768702252357386240")
-  let channel = guilch.channels.cache.get("856580503624744960")
-  channel.setName(`📁・Servidores: ${client.guilds.cache.size}`)
-
   if (!server) {
     await client.database.servidores.create({
       idServer: guild.id,

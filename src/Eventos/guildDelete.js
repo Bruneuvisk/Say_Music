@@ -40,10 +40,6 @@ module.exports = async (client, guild) => {
     await server.deleteOne()
   }
 
-  let guilch = client.guilds.cache.get("768702252357386240")
-  let channel = guilch.channels.cache.get("856580503624744960")
-  channel.setName(`📁・Servidores: ${client.guilds.cache.size}`)
-
   let owner = await client.users.fetch(guild.ownerId)
 
   let embedentrou = new MessageEmbed()
