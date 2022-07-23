@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "start_pm2": "pm2 start src/index.js --name saymusic --max-memory-restart 1000M"
+    "start": "pm2 start src/index.js --name saymusic --max-memory-restart 1000M",
+    "start_pm2": "node src/index.js"
   },
   "keywords": [
     "music",

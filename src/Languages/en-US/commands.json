@@ -1,9 +1,9 @@
 {
   "marcacao": {
     "title": "Hello my Angel!",
-    "description1": "Hello <@{{membro}}>, I am the little sister of my brothers Hercules, I am totally made to cheer your ears on your server I play totally good music, I was developed in three different languages to change the language just use the administrator **/config language** and configure, but my current and main language is 🇧🇷 because it was developed by Brazilians!",
+    "description1": "Hello <@{{membro}}>, I am the little sister of my brothers Hercules, I am totally made to cheer your ears on your server I play totally good music, I was developed in three different languages to change the language just use the administrator **/language** and configure, but my current and main language is 🇧🇷 because it was developed by Brazilians!",
     "description2": "**For further questions about me enter my [Support Server](https://discord.gg/xpYSzpJ8rK)**",
-    "description3": "To get access to my commands use: **/info help**"
+    "description3": "To get access to my commands use: **/help**"
   },
   "errorslash": {
     "message": "{{emoji}} | Hi, so my friend I am totally done with the **/** commands. \n\n But rest assured everybody makes mistakes, so please my friend, to use my commands use \n ```/info help``` \n If you can't use the **/** commands click on the button to add the / commands to your server \n\n If you have any problems, please report them to my server: https://discord.gg/xpYSzpJ8rK",

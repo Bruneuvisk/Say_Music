@@ -1,9 +1,9 @@
 {
   "marcacao": {
     "title": "Olá meu Anjo!",
-    "description1": "Olá <@{{membro}}>, sou irmãnzinha dos meus irmãos hércules, sou totalmente feita para alegrar seus ouvidos no seu servidor eu toco músicas totalmentes boas, eu fui desenvolvida em três linguagens diferentes para alterar a língua basta o administrador usar **/config language** e configurar, mais a minha atual e principal é o 🇧🇷 pois foi desenvolvida por brasileiros!",
+    "description1": "Olá <@{{membro}}>, sou irmãnzinha dos meus irmãos hércules, sou totalmente feita para alegrar seus ouvidos no seu servidor eu toco músicas totalmentes boas, eu fui desenvolvida em três linguagens diferentes para alterar a língua basta o administrador usar **/language** e configurar, mais a minha atual e principal é o 🇧🇷 pois foi desenvolvida por brasileiros!",
     "description2": "**Para tirar dúvidas a mais sobre mim entre no meu [Servidor de Suporte](https://discord.gg/xpYSzpJ8rK)**",
-    "description3": "Para ter acesso aos meus comandos use: **/info help**"
+    "description3": "Para ter acesso aos meus comandos use: **/help**"
   },
   "errorslash": {
     "message": "{{emoji}} | Oi, então amigo eu sou totalmente feita em comandos de **/**. \n\n Mais pode ficar tranquilo todo mundo erra, então por favor amigo para usar meus comandos use \n ```/info help``` \n Caso não consiga usar os comandos de **/** click no botão para adicionar os comandos de / em seu servidor \n\n Se acontecer algum problema reporte em meu servidor: https://discord.gg/xpYSzpJ8rK",

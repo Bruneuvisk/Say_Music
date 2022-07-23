@@ -1,9 +1,9 @@
 {
   "marcacao": {
     "title": "¡Hola mi Ángel!",
-    "description1": "Hola <@{{membro}}>, ¡Soy hermana pequeña de mis hermanos Hércules, estoy totalmente hecho para alegrar tus oídos en tu servidor toco música totalmente buena, fui desarrollado en tres idiomas diferentes para cambiar el idioma solo el administrador usa **/config language** y lo configura, pero mi actual y principal es el 🇧🇷 porque fue desarrollado por brasileños!",
+    "description1": "Hola <@{{membro}}>, ¡Soy hermana pequeña de mis hermanos Hércules, estoy totalmente hecho para alegrar tus oídos en tu servidor toco música totalmente buena, fui desarrollado en tres idiomas diferentes para cambiar el idioma solo el administrador usa **/language** y lo configura, pero mi actual y principal es el 🇧🇷 porque fue desarrollado por brasileños!",
     "description2": "**Para más preguntas sobre mí, entre en mi [Servidor de Soporte](https://discord.gg/xpYSzpJ8rK)**",
-    "description3": "Para acceder a mis comandos utilice: **/info help**"
+    "description3": "Para acceder a mis comandos utilice: **/help**"
   },
   "errorslash": {
     "message": "{{emoji}} | Hola, compañero ya he terminado totalmente con los comandos **/**. \n\n Pero ten por seguro que todo el mundo comete errores, así que por favor amigo, para usar mis comandos usa \n ```/info help`` \n Si no puedes usar los comandos de **/** haz clic en el botón para añadir los comandos de / en tu servidor \n\n Si tienes algún problema repórtalo a mi servidor: https://discord.gg/xpYSzpJ8rK",
