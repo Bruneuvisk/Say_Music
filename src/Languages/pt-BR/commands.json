@@ -16,7 +16,7 @@
     "message": "Requisitado por: {{membro}} | Say 💜"
   },
   "cooldown": {
-    "message": "{{emoji}} **|** Olá {{membro}}, então cuidado ao dar meus comandos repetidamentes por favor espere, {{tempo}} segundo(s) antes de realizar o comando `{{comando}}`."
+    "message": "{{emoji}} **|** Olá {{membro}}, então cuidado ao dar meus comandos repetidamentes por favor espere, antes de realizar o comando `{{comando}}`."
   },
   "blacklist": {
     "message": "{{emoji}} | {{membro}}, Olá amigo, então infelizmente você está na minha `Blacklist`, e não poderá ter acesso aos meus comandos, caso foi um engano entre no meu servidor de suporte para revogar."
@@ -544,7 +544,7 @@
       "title": "{{emoji}} | Informações sobre Mim!",
       "desc": "{{emoji}}・Olá {{membro}}, me chamo {{botname}} e sou um bot muito fofa e animada para alegrar seus ouvidos com minhas músicas, pode parecer que estou durmindo é por que ainda sou um bebê e durmo muito mais mesmo assim funciono muito bem sou irmã mais nova dos meus irmãos Hércules, fui muito bem feita e todos os meus comandos muito bem feitos e com muito carinho, quem deu a ideia de me criar foi o **<@{{idowner}}>/`{{brunotag}}`/`{{idowner}}`**, lembrando que ainda estou em minha fase **BETA** então poderá ocorrer bugs em meus comandos/sistemas, abaixo informações sobre meus status no discord/vps:",
       "field1name": "{{emoji}}・Minha Equipe:",
-      "filed1desc": "**__Fundadores do Projeto__**: \n `{{tagbruno}}`/`{{brunoid}}` \n `{{coldztag}}`/`{{coldzid}}` \n\n **__Adms do Projeto__**: \n `{{gzntag}}`/`{{gznid}}` \n `{{bigtag}}`/`{{bigid}}` \n `{{lucktag}}`/`{{luckid}}` \n `{{babiztag}}`/`{{babizid}}` \n\n",
+      "filed1desc": "**__Fundadores do Projeto__**: \n `{{tagbruno}}`/`{{brunoid}}` \n `{{coldztag}}`/`{{coldzid}}` \n\n **__Adms do Projeto__**: \n `{{bigtag}}`/`{{bigid}}` \n `{{lucktag}}`/`{{luckid}}` \n `{{babiztag}}`/`{{babizid}}` \n\n",
       "filed2name": "{{emoji}}・Status no Discord",
       "filed2desc": "__Usuários Totais:__ `{{users}}` \n __Servidores Totais:__ `{{servers}}` \n __Total de Comandos Usados:__ `{{commanduses}}` \n __Canais Totais:__ `{{canaistotais}}` \n __Canais de Voz Conectados:__ `{{channelconect}}`",
       "filed3name": "{{emoji}}・Status na Vps",

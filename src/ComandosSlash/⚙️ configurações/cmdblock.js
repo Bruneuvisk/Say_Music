@@ -1,4 +1,4 @@
-const { MessageEmbed, Permissions, MessageSelectMenu, MessageActionRow } = require('discord.js')
+const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCommandOptionType, ChannelType } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
@@ -6,35 +6,40 @@ module.exports = {
   description: 'Define se você quer boquear comandos, ou adicionar canais para o bot',
   cooldown: 10,
   memberperm: [
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
-    Permissions.FLAGS.ADMINISTRATOR,
+    'SendMessages',
+    'UseApplicationCommands',
+    'Administrator',
   ],
   clientperm: [
-    Permissions.FLAGS.EMBED_LINKS,
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
   ],
   requiredroles: [],
   alloweduserids: [],
   options: [
-    //{"Integer": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getInteger("ping_amount")
-    { String: { name: 'comando', description: 'Qual comando deseja bloquear no servidor?', required: false } }, //to use in the code: interacton.getString("ping_amount")
-    //{"User": { name: "ping_a_user", description: "To Ping a user lol", required: false }}, //to use in the code: interacton.getUser("ping_a_user")
-    { Channel: { name: 'canal', description: 'Qual canal deseja definir para comandos no bot?', required: false } }, //to use in the code: interacton.getChannel("what_channel")
-    //{"Role": { name: "what_role", description: "To Ping a Role lol", required: false }}, //to use in the code: interacton.getRole("what_role")
-    //{"IntChoices": { name: "what_ping", description: "What Ping do you want to get?", required: true, choices: [["Bot", 1], ["Discord Api", 2]] }, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("what_ping")
     {
-      StringChoices: {
-        name: 'lista',
-        description: 'Deseja ver qual lista para ver quais comandos ou canais estão ativos?',
-        required: false,
-        choices: [
-          ['Comandos', 'comandos'],
-          ['Canais', 'canais'],
-        ],
-      },
-    }, //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("what_ping")
+      name: "comando",
+      description: "Qual comando deseja bloquear no servidor?",
+      required: false,
+      type: ApplicationCommandOptionType.String
+    },
+    {
+      name: "canal",
+      description: "Qual canal deseja definir para comandos no bot?",
+      required: false,
+      type: ApplicationCommandOptionType.Channel
+    },
+    {
+      name: "lista",
+      description: "Deseja ver qual lista para ver quais comandos ou canais estão ativos?",
+      type: ApplicationCommandOptionType.String,
+      required: false,
+      choices: [
+        { name: 'comandos', value: 'comandos' },
+        { name: 'canais', value: 'canais' }
+      ],
+    },
   ],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
     const { commands } = client
@@ -104,7 +109,7 @@ module.exports = {
       return interaction.reply({ ephemeral: true, embeds: [embedremovido] })
     } else if (channel && !lista && !commandNamee) {
       const channelidd = guild.channels.cache.get(channel.id)
-      const realChannel = guild.channels.cache.find((x) => x.type == 'GUILD_TEXT' && x.id == channelidd.id)
+      const realChannel = guild.channels.cache.find((x) => x.type == ChannelType.GuildText && x.id == channelidd.id)
       const listachannels = server.cmdblock.channels
 
       if (!realChannel) {

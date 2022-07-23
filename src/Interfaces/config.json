@@ -1,7 +1,8 @@
 {
-  "token": "ODcwMjAwMTMzNjQyNDg1ODAy.YQJTBw.O62TXHsYuJIRS9hKMt4yDMVlCAo",
+  "token": "MTAwMDQ1ODMzNzQ1Mzg2NzAzOA.GdDQRA.pqcf7I9BCGHu5DV-2abpfLyH-vdbY1fy0PyM9Q",
   "prefix": "s*",
   "color": "#f502e1",
+  "clientID": "1000458337453867038",
   "mongoURI": "mongodb+srv://saymusicbot:ExsJay3pnJgzJuqh@saymusic.gbb9h.mongodb.net/Say",
   "ownerID": ["469661232153231385", "405173652049494026"],
   "tokenvoid": "VOID_0Q0m6AhGXJvwhILjbolh9O0wx1bdYE9Bk4cmKr5RvFct6BGz",
@@ -10,8 +11,8 @@
     "token": "Vv5K6_YQjuR-FN2Y2pdtUMhQcYMhipazcJ3eJ4zgAQ6sAZnL1w7YH3sU2k8RbOqiBtD_"
   },
   "webhook": {
-    "id": "900228243465048124",
-    "token": "h2cyFobVveoFgj3UTaNvjqLFw_fHLtlpCbk0DFdKYUGDvPmn1wbNfiwX3pJm6Cepe-kc"
+    "id": "982448604407005224",
+    "token": "XkjRoRHRx_ionNUPbnxeqhzyheX2RLV6awOVl3bhkcvHJRhpM5EaYmAs4exixMsjJ3dM"
   },
   "spotify": {
     "clientID": "fefacabcec2a442095b0b812b0f96fa9",
@@ -22,32 +23,5 @@
     "erelahost": "localhost",
     "erelaport": 1000,
     "erelapass": "168088bbBB"
-  },
-  "slashCommandsDirs": [
-    {
-      "Folder": "📋 informações",
-      "CmdName": "info",
-      "CmdDescription": "Lista meus comandos na área de informação"
-    },
-    {
-      "Folder": "⚙️ configurações",
-      "CmdName": "config",
-      "CmdDescription": "Lista meus comandos na área de configuração"
-    },
-    {
-      "Folder": "🎵 música",
-      "CmdName": "music",
-      "CmdDescription": "Lista meus comandos na área de música"
-    },
-    {
-      "Folder": "👀 filtros",
-      "CmdName": "filter",
-      "CmdDescription": "Lista meus comandos na área de filtros de música"
-    },
-    {
-      "Folder": "⚜️ fila",
-      "CmdName": "queue",
-      "CmdDescription": "Lista meus comandos na área de fila de música"
-    }
-  ]
+  }
 }

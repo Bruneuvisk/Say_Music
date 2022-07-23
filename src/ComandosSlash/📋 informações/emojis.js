@@ -1,4 +1,4 @@
-const { MessageEmbed, Permissions, MessageButton, MessageActionRow } = require('discord.js')
+const { PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 const Collection = require('../../Struturas/Collection')
 
@@ -6,23 +6,15 @@ module.exports = {
   name: 'emojis',
   description: 'Lista todos os emojis do seu servidor exibindo o nome e o emoji',
   cooldown: 10,
-  memberperm: [Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.USE_APPLICATION_COMMANDS],
+  memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
-    Permissions.FLAGS.EMBED_LINKS,
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
   ],
   requiredroles: [],
   alloweduserids: [],
-  options: [
-    //{"Integer": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getInteger("ping_amount")
-    //{ String: { name: 'comando', description: 'Qual comando deseja exibir informação?', required: false } }, //to use in the code: interacton.getString("ping_amount")
-    //{"User": { name: "ping_a_user", description: "To Ping a user lol", required: false }}, //to use in the code: interacton.getUser("ping_a_user")
-    //{"Channel": { name: "what_channel", description: "To Ping a Channel lol", required: false }}, //to use in the code: interacton.getChannel("what_channel")
-    //{"Role": { name: "what_role", description: "To Ping a Role lol", required: false }}, //to use in the code: interacton.getRole("what_role")
-    //{"IntChoices": { name: "what_ping", description: "What Ping do you want to get?", required: true, choices: [["Bot", 1], ["Discord Api", 2]] }, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("what_ping")
-    //{"StringChoices": { name: "qual_ping", description: "Qual ping você quer saber sobre mim?", required: true, choices: [["bot", "botping"], ["Discord Api", "discord_api"]] }}, //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("what_ping")
-  ],
+  options: [],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
     const {
       member,
@@ -59,23 +51,23 @@ module.exports = {
 
     embedEmoji.setDescription(paginatedItens.join('\n'))
 
-    let row = new MessageActionRow()
+    let row = new ActionRowBuilder()
 
-    const nextButton = new MessageButton()
+    const nextButton = new ButtonBuilder()
       .setLabel(`${t('commands:emojis:button.label1')}`)
       .setCustomId('next')
-      .setStyle('SECONDARY')
+      .setStyle(ButtonStyle.Secondary)
       .setEmoji('➡️')
       .setDisabled(false)
 
-    const backButton = new MessageButton()
+    const backButton = new ButtonBuilder()
       .setLabel(`${t('commands:emojis:button.label2')}`)
       .setCustomId('back')
-      .setStyle('SECONDARY')
+      .setStyle(ButtonStyle.Secondary)
       .setEmoji('⬅️')
       .setDisabled(true)
 
-    if (pages <= 1) nextButton.setDisabled(true)
+    if (pages <= 1) ButtonBuilder.from(nextButton).setDisabled(true)
 
     row.addComponents(backButton, nextButton)
 
@@ -94,8 +86,8 @@ module.exports = {
       .on('end', async (r, reason) => {
         if (reason != 'time') return
 
-        nextButton.setDisabled(true)
-        backButton.setDisabled(true)
+        ButtonBuilder.from(nextButton).setDisabled(true)
+        ButtonBuilder.from(backButton).setDisabled(true)
 
         row.addComponents(backButton, nextButton)
 
@@ -107,23 +99,23 @@ module.exports = {
       .on('collect', async (r) => {
         switch (r.customId) {
           case 'next':
-            if (interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) if (actualPage === pages) return
+            if (interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) if (actualPage === pages) return
 
             actualPage++
             paginatedItens = emojisArray.paginate(actualPage, 30)
             embedEmoji.setDescription(paginatedItens.join('\n'))
 
-            if (actualPage === pages && interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES))
-              nextButton.setDisabled(true)
+            if (actualPage === pages && interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES))
+              ButtonBuilder.from(nextButton).setDisabled(true)
 
-            if (actualPage === pages && !interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) {
-              nextButton.setDisabled(true)
-              backButton.setDisabled(true)
+            if (actualPage === pages && !interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) {
+              ButtonBuilder.from(nextButton).setDisabled(true)
+              ButtonBuilder.from(backButton).setDisabled(true)
             }
 
-            backButton.setDisabled(false)
+            ButtonBuilder.from(backButton).setDisabled(false)
 
-            row = new MessageActionRow().addComponents(backButton, nextButton)
+            row = new ActionRowBuilder().addComponents(backButton, nextButton)
 
             await r.deferUpdate()
             await interaction.editReply({ embeds: [embedEmoji], components: [row] })
@@ -131,23 +123,23 @@ module.exports = {
             break
 
           case 'back': {
-            if (interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) if (actualPage === 1) return
+            if (interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) if (actualPage === 1) return
 
             actualPage--
             paginatedItens = emojisArray.paginate(actualPage, 30)
             embedEmoji.setDescription(paginatedItens.join('\n'))
 
-            if (actualPage === 1 && interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES))
-              backButton.setDisabled(true)
+            if (actualPage === 1 && interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES))
+              ButtonBuilder.from(backButton).setDisabled(true)
 
-            if (actualPage === 1 && !interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) {
-              nextButton.setDisabled(true)
-              backButton.setDisabled(true)
+            if (actualPage === 1 && !interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) {
+              ButtonBuilder.from(nextButton).setDisabled(true)
+              ButtonBuilder.from(backButton).setDisabled(true)
             }
 
-            nextButton.setDisabled(false)
+            ButtonBuilder.from(nextButton).setDisabled(false)
 
-            row = new MessageActionRow().addComponents(backButton, nextButton)
+            row = new ActionRowBuilder().addComponents(backButton, nextButton)
 
             await r.deferUpdate()
             await interaction.editReply({ embeds: [embedEmoji], components: [row] })

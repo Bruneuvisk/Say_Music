@@ -1,5 +1,5 @@
 const config = require('../Interfaces/config.json')
-const { MessageButton, MessageActionRow } = require('discord.js')
+const { ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js')
 
 module.exports.getPrefix = getPrefix
 module.exports.paginateItens = paginateItens
@@ -24,15 +24,15 @@ async function getPrefix(id, client) {
 }
 
 async function paginateItens(interaction, pages, client, timeout = 120000) {
-  let bnt1 = new MessageButton().setStyle('PRIMARY').setCustomId('1').setEmoji(`⬅️`).setLabel('Voltar')
-  let bnt2 = new MessageButton().setStyle('PRIMARY').setCustomId('2').setEmoji(`➡️`).setLabel('Avançar')
+  let bnt1 = new ButtonBuilder().setStyle(ButtonStyle.Primary).setCustomId('1').setEmoji(`⬅️`).setLabel('Voltar')
+  let bnt2 = new ButtonBuilder().setStyle(ButtonStyle.Primary).setCustomId('2').setEmoji(`➡️`).setLabel('Avançar')
 
   if (!interaction && !interaction.channel) throw new Error('O canal não existe bruno meu deus.')
   if (!pages) throw new Error('As Paginas não existem.')
 
-  if (pages.length <= 1) bnt2.setDisabled(true)
+  if (pages.length <= 1) ButtonBuilder.from(bnt2).setDisabled(true)
 
-  let row = new MessageActionRow().addComponents(bnt1, bnt2)
+  let row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
   let page = 0
   await interaction.reply({
@@ -57,13 +57,13 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
         if (page === 1) bnt1.setDisabled(true)
 
         if (page === 1) {
-          bnt2.setDisabled(true)
-          bnt1.setDisabled(true)
+          ButtonBuilder.from(bnt2).setDisabled(true)
+          ButtonBuilder.from(bnt1).setDisabled(true)
         }
 
-        bnt2.setDisabled(false)
+        ButtonBuilder.from(bnt2).setDisabled(false)
 
-        row = new MessageActionRow().addComponents(bnt1, bnt2)
+        row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
         page = page > 0 ? --page : pages.length - 1
 
@@ -78,16 +78,17 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
         })
         break
       case '2':
-        if (page === pages.length) bnt2.setDisabled(true)
+        if (page === pages.length) ButtonBuilder.from(bnt2).setDisabled(true)
+
 
         if (page === pages.length) {
-          bnt2.setDisabled(true)
-          bnt1.setDisabled(true)
+          ButtonBuilder.from(bnt2).setDisabled(true)
+          ButtonBuilder.from(bnt1).setDisabled(true)
         }
 
-        bnt1.setDisabled(false)
+        ButtonBuilder.from(bnt1).setDisabled(false)
 
-        row = new MessageActionRow().addComponents(bnt1, bnt2)
+        row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
         page = page + 1 < pages.length ? ++page : 0
 
@@ -104,10 +105,10 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
     }
   })
   buttonCollector.on('end', () => {
-    bnt2.setDisabled(true)
-    bnt1.setDisabled(true)
+    ButtonBuilder.from(bnt2).setDisabled(true)
+    ButtonBuilder.from(bnt1).setDisabled(true)
 
-    row = new MessageActionRow().addComponents(bnt1, bnt2)
+    row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
     interaction.editReply({
       embeds: [

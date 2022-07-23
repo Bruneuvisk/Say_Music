@@ -1,4 +1,4 @@
-const { MessageEmbed, Permissions, MessageButton, MessageActionRow } = require('discord.js')
+const { PermissionsBitField, ButtonBuilder, ButtonStyle, MessageActionRow, ApplicationCommandType, ApplicationCommandOptionType, ChannelType } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 
 const levelbooster = {
@@ -12,34 +12,15 @@ module.exports = {
   name: 'serverinfo',
   description: 'Exibe as informações sobre o servidor no qual foi feito o comando',
   cooldown: 5,
-  memberperm: [Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.USE_APPLICATION_COMMANDS],
+  memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
-    Permissions.FLAGS.EMBED_LINKS,
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
   ],
   requiredroles: [],
   alloweduserids: [],
-  options: [
-    //{"Integer": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getInteger("ping_amount")
-    //{ String: { name: 'id_membro', description: 'Qual membro deseja pegar as informações pelo id?', required: false } }, //to use in the code: interacton.getString("ping_amount")
-    //{ User: { name: 'membro', description: 'Qual membro deseja pegar as informações?', required: false } }, //to use in the code: interacton.getUser("ping_a_user")
-    //{"Channel": { name: "what_channel", description: "To Ping a Channel lol", required: false }}, //to use in the code: interacton.getChannel("what_channel")
-    //{"Role": { name: "what_role", description: "To Ping a Role lol", required: false }}, //to use in the code: interacton.getRole("what_role")
-    //{"IntChoices": { name: "what_ping", description: "What Ping do you want to get?", required: true, choices: [["Bot", 1], ["Discord Api", 2]] }, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("what_ping")
-    /*{
-      StringChoices: {
-        name: 'qual_ping',
-        description: 'Qual ping você quer saber sobre mim?',
-        required: true,
-        choices: [
-          ['bot', 'botping'],
-          ['Discord Api', 'discord_api'],
-        ],
-      },
-    },*/
-    //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("what_ping")
-  ],
+  options: [],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
     const {
       member,
@@ -129,11 +110,7 @@ module.exports = {
     if (interaction.guild.banner == null) {
       setTimeout(() => {
         const guildEmbed = new EmbedSay(interaction.member.user, t)
-          .setAuthor(
-            `${t('commands:serverinfo:embedinfo.title', { guild: guild.name })}`,
-            guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl,
-            guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl
-          )
+          .setAuthor({ name: `${t('commands:serverinfo:embedinfo.title', { guild: guild.name })}`, iconURL: guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl, url: guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl })
           .setDescription(
             `${t('commands:serverinfo:embedinfo.desc', {
               emoji: emojis.emojicerto,
@@ -152,9 +129,9 @@ module.exports = {
               emojilista: emojis.emojilista,
               rolesize: guild.roles.cache.size,
               channelsize: guild.channels.cache.size,
-              textsize: guild.channels.cache.filter((x) => x.type == 'GUILD_TEXT').size,
-              voicesize: guild.channels.cache.filter((x) => x.type == 'GUILD_VOICE').size,
-              categorysize: guild.channels.cache.filter((x) => x.type == 'GUILD_CATEGORY').size,
+              textsize: guild.channels.cache.filter((x) => x.type == ChannelType.GuildText).size,
+              voicesize: guild.channels.cache.filter((x) => x.type == ChannelType.GuildVoice).size,
+              categorysize: guild.channels.cache.filter((x) => x.type == ChannelType.GuildCategory).size,
               emojisize: guild.emojis.cache.size,
               animatedemoji: emojianimado,
               emojinot: emojinonanimedo,
@@ -175,11 +152,7 @@ module.exports = {
     } else {
       setTimeout(() => {
         const guildEmbed = new EmbedSay(interaction.member.user, t)
-          .setAuthor(
-            `${t('commands:serverinfo:embedinfo.title', { guild: guild.name })}`,
-            guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl,
-            guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl
-          )
+          .setAuthor({  name: `${t('commands:serverinfo:embedinfo.title', { guild: guild.name })}`, iconURL: guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl, url: guildUrl == null ? interaction.member.user.displayAvatarURL({ dynamic: true }) : guildUrl })
           .setDescription(
             `${t('commands:serverinfo:embedinfo.desc', {
               emoji: emojis.emojicerto,
@@ -198,9 +171,9 @@ module.exports = {
               emojilista: emojis.emojilista,
               rolesize: guild.roles.cache.size,
               channelsize: guild.channels.cache.size,
-              textsize: guild.channels.cache.filter((x) => x.type == 'GUILD_TEXT').size,
-              voicesize: guild.channels.cache.filter((x) => x.type == 'GUILD_VOICE').size,
-              categorysize: guild.channels.cache.filter((x) => x.type == 'GUILD_CATEGORY').size,
+              textsize: guild.channels.cache.filter((x) => x.type == ChannelType.GuildText).size,
+              voicesize: guild.channels.cache.filter((x) => x.type == ChannelType.GuildVoice).size,
+              categorysize: guild.channels.cache.filter((x) => x.type == ChannelType.GuildCategory).size,
               emojisize: guild.emojis.cache.size,
               animatedemoji: emojianimado,
               emojinot: emojinonanimedo,

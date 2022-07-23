@@ -1,33 +1,48 @@
-const { Client, Collection, Intents } = require('discord.js')
-const config = require('../Interfaces/config.json')
+const { Client, Collection, GatewayIntentBits, Partials } = require('discord.js')
 const Guild = require('../Database/Schemas/Guild')
 const Locale = require('../../Lib/Locale')
+const SayLavaMusic = require("../Struturas/Lavalink")
 
 class SayMusic extends Client {
   constructor(options) {
     super({
+      allowedMentions: {
+        everyone: false,
+        roles: false,
+        users: false
+      },
       intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MEMBERS,
-        Intents.FLAGS.GUILD_BANS,
-        Intents.FLAGS.GUILD_WEBHOOKS,
-        Intents.FLAGS.GUILD_MESSAGES,
-        Intents.FLAGS.DIRECT_MESSAGES,
-        Intents.FLAGS.GUILD_VOICE_STATES,
-        Intents.FLAGS.GUILD_PRESENCES,
-        Intents.FLAGS.GUILD_INTEGRATIONS,
-        Intents.FLAGS.GUILD_MESSAGE_TYPING,
-      ],
-    })
-    this.database = new Collection()
-    this.commands = new Collection()
-    this.cooldowns = new Collection()
-    this.slashCommands = new Collection()
-  }
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildIntegrations,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildWebhooks,
+        GatewayIntentBits.GuildInvites,
+        GatewayIntentBits.GuildVoiceStates,
+        GatewayIntentBits.GuildPresences,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMessageReactions,
+        GatewayIntentBits.GuildMessageTyping,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.DirectMessageReactions,
+        GatewayIntentBits.DirectMessageTyping,
 
-  login(token) {
-    token = config.token
-    return super.login(token)
+      ],
+      partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.Reaction]
+    })
+    this.commands = new Collection();
+    this.slashCommands = new Collection();
+    this.config = require("../Interfaces/config.json");
+    this.aliases = new Collection();
+    this.commands = new Collection();
+    this.database = new Collection();
+    this.logger = require("../Utils/logger");
+    if (!this.token) this.token = this.config.token;
+    this.manager = new SayLavaMusic(this)
+
+    this.rest.on('rateLimited', (info) => {
+      this.logger.log('ratelimit', "log");
+    })
   }
 
   async getLanguage(firstGuild) {
@@ -75,6 +90,10 @@ class SayMusic extends Client {
 
     return t
   }
+
+  connect() {
+    return super.login(this.token);
+  };
 }
 
 module.exports.SayMusic = SayMusic

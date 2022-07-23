@@ -1,28 +1,31 @@
-const { MessageEmbed, Permissions, MessageSelectMenu, MessageActionRow } = require('discord.js')
+const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCommandOptionType } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'addcurrentqueue',
   description: 'Adiciona para sua playlist a fila de músicas que está sendo tocada atualmente',
   cooldown: 5,
-  memberperm: [Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.USE_APPLICATION_COMMANDS],
+  memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
-    Permissions.FLAGS.EMBED_LINKS,
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
+  ],
+  memberperm: ['SendMessages', 'UseApplicationCommands'],
+  clientperm: [
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
   ],
   requiredroles: [],
   alloweduserids: [],
   options: [
-    //{"Integer": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getInteger("ping_amount")
     {
-      String: { name: 'nome_da_fila', description: 'Qual playlist deseja atribuir a fila de músicas?', required: true },
-    }, //to use in the code: interacton.getString("ping_amount")
-    //{"User": { name: "ping_a_user", description: "To Ping a user lol", required: false }}, //to use in the code: interacton.getUser("ping_a_user")
-    //{"Channel": { name: "what_channel", description: "To Ping a Channel lol", required: false }}, //to use in the code: interacton.getChannel("what_channel")
-    //{"Role": { name: "what_role", description: "To Ping a Role lol", required: false }}, //to use in the code: interacton.getRole("what_role")
-    //{"IntChoices": { name: "what_ping", description: "What Ping do you want to get?", required: true, choices: [["Bot", 1], ["Discord Api", 2]] }, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("what_ping")
-    //{"StringChoices": { name: "qual_ping", description: "Qual ping você quer saber sobre mim?", required: true, choices: [["bot", "botping"], ["Discord Api", "discord_api"]] }}, //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("what_ping")
+      name: "nome_da_fila",
+      description: "Qual playlist deseja atribuir a fila de músicas?",
+      type: ApplicationCommandOptionType.String,
+      required: true,
+    },
   ],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
     const {

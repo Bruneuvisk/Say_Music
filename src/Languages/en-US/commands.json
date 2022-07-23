@@ -16,7 +16,7 @@
     "message": "Requested by: {{membro}} | Say 💜"
   },
   "cooldown": {
-    "message": "{{emoji}} **|** Hello {{membro}}, so be careful when giving my commands repeatedly please wait, {{tempo}} second(s) before giving the `{{comando}}` command."
+    "message": "{{emoji}} **|** Hello {{membro}}, so be careful when giving my commands repeatedly please wait for the use `{{comando}}` command."
   },
   "blacklist": {
     "message": "{{emoji}} | {{membro}}, Hello friend, so unfortunately you are on my `Blacklist`, and will not be able to access my commands, if it was a mistake please log into my support server to revoke."
@@ -544,7 +544,7 @@
       "title": "{{emoji}} | Information about Me!",
       "desc": "{{emoji}}・Hello {{membro}}, my name is {{botname}} and I am a very cute and lively bot to cheer your ears with my music, it may seem that I am sleeping is because I am still a baby and sleep a lot but even so I work very well I am the younger sister of my brothers Hercules, I was very well done and all my commands very well done and with great care, who gave the idea to create me was **<@{{idowner}}>/`{{brunotag}}`/`{{idowner}}`**, remembering that I am still in my **BETA** phase so there may be bugs in my commands/systems, below is information about my discord/vps status:",
       "field1name": "{{emoji}}・My Team:",
-      "filed1desc": "**__Project Founders__**: \n `{{tagbruno}}`/`{{brunoid}}` \n `{{coldztag}}`/`{{coldzid}}` \n\n **__Project Adms__**: \n `{{gzntag}}`/`{{gznid}}` \n `{{bigtag}}`/`{{bigid}}` \n `{{lucktag}}`/`{{luckid}}` \n `{{babiztag}}`/`{{babizid}}` \n\n",
+      "filed1desc": "**__Project Founders__**: \n `{{tagbruno}}`/`{{brunoid}}` \n `{{coldztag}}`/`{{coldzid}}` \n\n **__Project Adms__**: \n `{{bigtag}}`/`{{bigid}}` \n `{{lucktag}}`/`{{luckid}}` \n `{{babiztag}}`/`{{babizid}}` \n\n",
       "filed2name": "{{emoji}}・Discord Status",
       "filed2desc": "__Total Users:__ `{{users}}` \n __Total Servers:__ `{{servers}}` \n __Total Commands Used:__ `{{commanduses}}` \n __Total Channels:__ `{{canaistotais}}` \n __Connected Voice Channels:__ `{{channelconect}}`",
       "filed3name": "{{emoji}}・Vps Status",

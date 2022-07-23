@@ -1,47 +1,28 @@
-const { MessageEmbed, Permissions, MessageButton, MessageActionRow } = require('discord.js')
+const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'invite',
   description: 'Me convide para o seu servidor',
   cooldown: 5,
-  memberperm: [Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.USE_APPLICATION_COMMANDS],
+  memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
-    Permissions.FLAGS.EMBED_LINKS,
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
   ],
   requiredroles: [],
   alloweduserids: [],
-  options: [
-    //{"Integer": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getInteger("ping_amount")
-    //{ String: { name: 'id_membro', description: 'Qual membro deseja pegar as informações pelo id?', required: false } }, //to use in the code: interacton.getString("ping_amount")
-    //{ User: { name: 'membro', description: 'Qual membro deseja pegar as informações?', required: false } }, //to use in the code: interacton.getUser("ping_a_user")
-    //{"Channel": { name: "what_channel", description: "To Ping a Channel lol", required: false }}, //to use in the code: interacton.getChannel("what_channel")
-    //{"Role": { name: "what_role", description: "To Ping a Role lol", required: false }}, //to use in the code: interacton.getRole("what_role")
-    //{"IntChoices": { name: "what_ping", description: "What Ping do you want to get?", required: true, choices: [["Bot", 1], ["Discord Api", 2]] }, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("what_ping")
-    /*{
-      StringChoices: {
-        name: 'qual_ping',
-        description: 'Qual ping você quer saber sobre mim?',
-        required: true,
-        choices: [
-          ['bot', 'botping'],
-          ['Discord Api', 'discord_api'],
-        ],
-      },
-    },*/
-    //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("what_ping")
-  ],
+  options: [],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
-    var permissions = 8589934583
+    var permissions = "2482367856"
     let invite = new EmbedSay(interaction.member.user, t)
       .setTitle(`${t('commands:invite:embed.title', { emoji: emojis.emojilink })}`)
       .setDescription(
         `${t('commands:invite:embed.desc', { emoji: emojis.emojicerto, clientid: client.user.id, perms: permissions })}`
       )
       .setURL(
-        `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot%20applications.commands`
+        `https://discord.com/api/oauth2/authorize?client_id=1000458337453867038&permissions=2482367856&scope=bot%20applications.commands`
       )
       .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
     return interaction.reply({ embeds: [invite] })

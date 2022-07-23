@@ -1,4 +1,4 @@
-const { MessageEmbed, Permissions, MessageSelectMenu, MessageActionRow } = require('discord.js')
+const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCommandOptionType } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
@@ -6,36 +6,29 @@ module.exports = {
   description: 'Configura uma linguagem para seu servidor.',
   cooldown: 10,
   memberperm: [
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
-    Permissions.FLAGS.ADMINISTRATOR,
+    'SendMessages',
+    'UseApplicationCommands',
+    'Administrator',
   ],
   clientperm: [
-    Permissions.FLAGS.EMBED_LINKS,
-    Permissions.FLAGS.SEND_MESSAGES,
-    Permissions.FLAGS.USE_APPLICATION_COMMANDS,
+    'EmbedLinks',
+    'SendMessages',
+    'UseApplicationCommands',
   ],
   requiredroles: [],
   alloweduserids: [],
   options: [
-    //{"Integer": { name: "ping_amount", description: "How many times do you want to ping?", required: true }}, //to use in the code: interacton.getInteger("ping_amount")
-    //{ String: { name: 'comando', description: 'Qual comando deseja bloquear no servidor?', required: false } }, //to use in the code: interacton.getString("ping_amount")
-    //{"User": { name: "ping_a_user", description: "To Ping a user lol", required: false }}, //to use in the code: interacton.getUser("ping_a_user")
-    //{ Channel: { name: 'canal', description: 'Qual canal deseja definir para comandos no bot?', required: false } }, //to use in the code: interacton.getChannel("what_channel")
-    //{"Role": { name: "what_role", description: "To Ping a Role lol", required: false }}, //to use in the code: interacton.getRole("what_role")
-    //{"IntChoices": { name: "what_ping", description: "What Ping do you want to get?", required: true, choices: [["Bot", 1], ["Discord Api", 2]] }, //here the second array input MUST BE A NUMBER // TO USE IN THE CODE: interacton.getInteger("what_ping")
     {
-      StringChoices: {
-        name: 'lingua',
-        description: 'Qual linguagem deseja definir neste servidor?',
-        required: false,
-        choices: [
-          ['pt-BR', 'pt-BR'],
-          ['es-ES', 'es-ES'],
-          ['en-US', 'en-US'],
-        ],
-      },
-    }, //here the second array input MUST BE A STRING // TO USE IN THE CODE: interacton.getString("what_ping")
+      name: "idioma",
+      description: "Qual idioma deseja definir neste servidor?",
+      type: ApplicationCommandOptionType.String,
+      required: true,
+      choices: [
+        { name: 'pt-BR', value: 'pt-BR' },
+        { name: 'es-ES', value: 'es-ES' },
+        { name: 'en-US', value: 'en-US' }
+      ],
+    },
   ],
   run: async ({ client, interaction, prefix, color, emojis, language }, t) => {
     const server = await client.database.servidores.findOne({
@@ -57,7 +50,7 @@ module.exports = {
     } = interaction
     const { guild } = member
 
-    const args = options.getString('lingua')
+    const args = options.getString('idioma')
     const lang = server.language
     let atualang
 

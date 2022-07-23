@@ -1,4 +1,4 @@
-const { MessageButton, MessageActionRow, MessageEmbed, Permissions } = require('discord.js')
+const { PermissionsBitField, MessageActionRow, MessageEmbed } = require('discord.js')
 
 module.exports = {
   name: 'avatar',
@@ -6,8 +6,8 @@ module.exports = {
     'Mostra um avatar de um membro no servidor ou se selecionar o id_membro, mande o id do membro que deseja enviar para pegar o seu avatar.',
   aliases: [],
   category: '📋 informações',
-  MemberPerm: [Permissions.FLAGS.SEND_MESSAGES],
-  ClientPerm: [Permissions.FLAGS.EMBED_LINKS, Permissions.FLAGS.SEND_MESSAGES],
+  MemberPerm: [PermissionsBitField.Flags.SendMessages],
+  ClientPerm: [PermissionsBitField.Flags.EmbedLinks, PermissionsBitField.Flags.SendMessages],
   usage: '',
   cooldown: 5,
   async run({ client, message, args, prefix, color, language }, t) {
