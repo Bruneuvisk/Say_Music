@@ -37,10 +37,7 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
   let page = 0
   await interaction.reply({
     embeds: [
-      pages[page].setFooter(
-        `Page: ${page + 1}/${pages.length}`,
-        interaction.member.displayAvatarURL({ dynamic: true })
-      ),
+      pages[page].setFooter({ text: `Page: ${page + 1}/${pages.length}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true }) }),
     ],
     components: [row],
   })
@@ -54,14 +51,14 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
     b.deferUpdate()
     switch (b.customId) {
       case '1':
-        if (page === 1) bnt1.setDisabled(true)
+        if (page === 1) bnt1 = ButtonBuilder.from(bnt1).setDisabled(true)
 
         if (page === 1) {
-          ButtonBuilder.from(bnt2).setDisabled(true)
-          ButtonBuilder.from(bnt1).setDisabled(true)
+          bnt2 = ButtonBuilder.from(bnt2).setDisabled(true)
+          bnt1 = ButtonBuilder.from(bnt1).setDisabled(true)
         }
 
-        ButtonBuilder.from(bnt2).setDisabled(false)
+        bnt2 = ButtonBuilder.from(bnt2).setDisabled(false)
 
         row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
@@ -70,23 +67,22 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
         interaction.editReply({
           embeds: [
             pages[page].setFooter(
-              `Page: ${page + 1}/${pages.length}`,
-              interaction.member.displayAvatarURL({ dynamic: true })
+              { text: `Page: ${page + 1}/${pages.length}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true }) }
             ),
           ],
           components: [row],
         })
         break
       case '2':
-        if (page === pages.length) ButtonBuilder.from(bnt2).setDisabled(true)
+        if (page === pages.length) bnt2 = ButtonBuilder.from(bnt2).setDisabled(true)
 
 
         if (page === pages.length) {
-          ButtonBuilder.from(bnt2).setDisabled(true)
-          ButtonBuilder.from(bnt1).setDisabled(true)
+          bnt2 = ButtonBuilder.from(bnt2).setDisabled(true)
+          bnt1 = ButtonBuilder.from(bnt1).setDisabled(true)
         }
 
-        ButtonBuilder.from(bnt1).setDisabled(false)
+        bnt1 = ButtonBuilder.from(bnt1).setDisabled(false)
 
         row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
@@ -95,8 +91,7 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
         interaction.editReply({
           embeds: [
             pages[page].setFooter(
-              `Page: ${page + 1}/${pages.length}`,
-              interaction.member.displayAvatarURL({ dynamic: true })
+              { text: `Page: ${page + 1}/${pages.length}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true }) }
             ),
           ],
           components: [row],
@@ -105,16 +100,15 @@ async function paginateItens(interaction, pages, client, timeout = 120000) {
     }
   })
   buttonCollector.on('end', () => {
-    ButtonBuilder.from(bnt2).setDisabled(true)
-    ButtonBuilder.from(bnt1).setDisabled(true)
+    bnt2 = ButtonBuilder.from(bnt2).setDisabled(true)
+    bnt1 = ButtonBuilder.from(bnt1).setDisabled(true)
 
     row = new ActionRowBuilder().addComponents(bnt1, bnt2)
 
     interaction.editReply({
       embeds: [
         pages[page].setFooter(
-          `Page: ${page + 1}/${pages.length}`,
-          interaction.member.displayAvatarURL({ dynamic: true })
+          { text: `Page: ${page + 1}/${pages.length}`, iconURL: interaction.member.displayAvatarURL({ dynamic: true }) }
         ),
       ],
       components: [row],

@@ -48,7 +48,7 @@ module.exports = {
     const guildIcon = guild.iconURL({ dynamic: true, size: 2048 })
 
     const embedIcon = new EmbedSay(interaction.member.user, t)
-      .setAuthor(`${t('commands:servericon:embedicon', { guild: guild.name })}`, guildIcon, guildIcon)
+      .setAuthor({ name: `${t('commands:servericon:embedicon', { guild: guild.name })}`, iconURL: guildIcon, url: guildIcon })
       .setImage(guildIcon)
     interaction.reply({ embeds: [embedIcon], components: [row] })
   },

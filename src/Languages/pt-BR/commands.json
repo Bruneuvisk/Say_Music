@@ -115,7 +115,8 @@
     "CREATE_PRIVATE_THREADS": "`Criar threads privados`",
     "SEND_MESSAGES_IN_THREADS": "`Enviar mensagens em threads`",
     "START_EMBEDDED_ACTIVITIES": "`Iniciar atividades incorporadas`",
-    "USE_EXTERNAL_STICKERS": "`Usar stickers externos`"
+    "USE_EXTERNAL_STICKERS": "`Usar stickers externos`",
+    "MODERATE_MEMBERS": "`Colocar Membros De Castigo`"
   },
   "requiredroles": {
     "title": "{{emoji}} | Error",

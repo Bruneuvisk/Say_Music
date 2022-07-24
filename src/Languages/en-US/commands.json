@@ -115,7 +115,8 @@
     "CREATE_PRIVATE_THREADS": "`Create private threads`",
     "SEND_MESSAGES_IN_THREADS": "`Send messages in threads`",
     "START_EMBEDDED_ACTIVITIES": "`Start embedded activities`",
-    "USE_EXTERNAL_STICKERS": "`Use external stickers`"
+    "USE_EXTERNAL_STICKERS": "`Use external stickers`",
+    "MODERATE_MEMBERS": "`Moderate Members`"
   },
   "requiredroles": {
     "title": "{{emoji}} | Error",

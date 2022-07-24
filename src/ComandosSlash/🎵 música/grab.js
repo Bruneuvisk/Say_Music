@@ -59,7 +59,7 @@ module.exports = {
 
     let embedauthor = new EmbedSay(interaction.member.user, t)
       .setTitle(`${t('commands:grab:embed.title', { emoji: emojis.emojipasta })}`)
-      .setAuthor(`${player.queue.current.title}`)
+      .setAuthor({ name: `${player.queue.current.title}` })
       .setThumbnail(`https://img.youtube.com/vi/${player.queue.current.identifier}/mqdefault.jpg`)
       .setURL(player.queue.current.uri)
       .setDescription(

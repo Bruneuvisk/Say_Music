@@ -2,10 +2,10 @@ const { PermissionsBitField, ButtonBuilder, ButtonStyle, MessageActionRow, Appli
 const EmbedSay = require('../../Struturas/EmbedSay')
 
 const levelbooster = {
-  NONE: '**0**',
-  TIER_1: '**1**',
-  TIER_2: '**2**',
-  TIER_3: '**3**',
+  0: '**0**',
+  1: '**1**',
+  2: '**2**',
+  3: '**3**',
 }
 
 module.exports = {
@@ -68,29 +68,29 @@ module.exports = {
     }
 
     const verificationLevels = {
-      NONE: `${t('commands:serverinfo:utils:verification.NONE')}`,
-      LOW: `${t('commands:serverinfo:utils:verification.LOW')}`,
-      MEDIUM: `${t('commands:serverinfo:utils:verification.MEDIUM')}`,
-      HIGH: `${t('commands:serverinfo:utils:verification.HIGH')}`,
-      VERY_HIGH: `${t('commands:serverinfo:utils:verification.VERY_HIGH')}`,
+      0: `${t('commands:serverinfo:utils:verification.NONE')}`,
+      1: `${t('commands:serverinfo:utils:verification.LOW')}`,
+      2: `${t('commands:serverinfo:utils:verification.MEDIUM')}`,
+      3: `${t('commands:serverinfo:utils:verification.HIGH')}`,
+      4: `${t('commands:serverinfo:utils:verification.VERY_HIGH')}`,
     }
 
     const filterLevels = {
-      DISABLED: `${t('commands:serverinfo:utils:filterLevels.DISABLED')}`,
-      MEMBERS_WITHOUT_ROLES: `${t('commands:serverinfo:utils:filterLevels.MEMBERS_WITHOUT_ROLES')}`,
-      ALL_MEMBERS: `${t('commands:serverinfo:utils:filterLevels.ALL_MEMBERS')}`,
+      0: `${t('commands:serverinfo:utils:filterLevels.DISABLED')}`,
+      1: `${t('commands:serverinfo:utils:filterLevels.MEMBERS_WITHOUT_ROLES')}`,
+      2: `${t('commands:serverinfo:utils:filterLevels.ALL_MEMBERS')}`,
     }
 
     const mfalevels = {
-      NONE: `${t('commands:serverinfo:utils:mfalevels.NONE')}`,
-      ELEVATED: `${t('commands:serverinfo:utils:mfalevels.ELEVATED')}`,
+      0: `${t('commands:serverinfo:utils:mfalevels.NONE')}`,
+      1: `${t('commands:serverinfo:utils:mfalevels.ELEVATED')}`,
     }
 
     const nsfwlevels = {
-      DEFAULT: `${t('commands:serverinfo:utils:nsfwlevels.DEFAULT')}`,
-      EXPLICIT: `${t('commands:serverinfo:utils:nsfwlevels.EXPLICIT')}`,
-      SAFE: `${t('commands:serverinfo:utils:nsfwlevels.SAFE')}`,
-      AGE_RESTRICTED: `${t('commands:serverinfo:utils:nsfwlevels.AGE_RESTRICTED')}`,
+      0: `${t('commands:serverinfo:utils:nsfwlevels.DEFAULT')}`,
+      1: `${t('commands:serverinfo:utils:nsfwlevels.EXPLICIT')}`,
+      2: `${t('commands:serverinfo:utils:nsfwlevels.SAFE')}`,
+      3: `${t('commands:serverinfo:utils:nsfwlevels.AGE_RESTRICTED')}`,
     }
 
     let memberowner = guild.members.cache.get(guild.ownerId)

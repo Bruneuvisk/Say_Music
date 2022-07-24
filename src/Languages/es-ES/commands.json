@@ -115,7 +115,8 @@
     "CREATE_PRIVATE_THREADS": "`Creación de temas privados`",
     "SEND_MESSAGES_IN_THREADS": "`Enviar mensajes en threads`",
     "START_EMBEDDED_ACTIVITIES": "Iniciar las actividades integradas`",
-    "USE_EXTERNAL_STICKERS": "`Uso de pegatinas externas`"
+    "USE_EXTERNAL_STICKERS": "`Uso de pegatinas externas`",
+    "MODERATE_MEMBERS": "`Miembros Moderados`"
   },
   "requiredroles": {
     "title": "{{emoji}} | Error",

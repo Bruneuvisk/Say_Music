@@ -62,13 +62,7 @@ module.exports = {
       })
 
       let embedavatar = new EmbedSay(interaction.member.user, t)
-        .setAuthor(
-          `${t('commands:avatar:embedavatarglobal.author', {
-            membro: `${realMember.username}#${realMember.discriminator}`,
-          })}`,
-          avatarURl,
-          avatarURl
-        )
+        .setAuthor({ name: `${t('commands:avatar:embedavatarglobal.author', { membro: `${realMember.username}#${realMember.discriminator}` })}`, iconURL: avatarURl, url: avatarURl })
         .setDescription(`${t('commands:avatar:embedavatarglobal.desc', { avatar: avatarURl })}`)
         .setImage(avatarURl)
       return interaction.reply({ embeds: [embedavatar] })
