@@ -4,7 +4,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'searchsc',
-  description: 'Pesquisa alguma música no soundcloud para ser adicionada na sua fila de músicas',
+  description: '[📋] Pesquisa alguma música no soundcloud para ser adicionada na sua fila de músicas',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

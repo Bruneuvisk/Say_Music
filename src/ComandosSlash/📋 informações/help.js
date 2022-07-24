@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'help',
-  description: 'Exibe minha lista dos meus comandos em que possuo',
+  description: '[📋] Exibe minha lista dos meus comandos em que possuo',
   cooldown: 10,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

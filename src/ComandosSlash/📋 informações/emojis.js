@@ -1,10 +1,10 @@
-const { PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder, ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js')
+const { PermissionsBitField, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js')
 const EmbedSay = require('../../Struturas/EmbedSay')
 const Collection = require('../../Struturas/Collection')
 
 module.exports = {
   name: 'emojis',
-  description: 'Lista todos os emojis do seu servidor exibindo o nome e o emoji',
+  description: '[📋] Lista todos os emojis do seu servidor exibindo o nome e o emoji',
   cooldown: 10,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
@@ -53,21 +53,21 @@ module.exports = {
 
     let row = new ActionRowBuilder()
 
-    const nextButton = new ButtonBuilder()
+    let nextButton = new ButtonBuilder()
       .setLabel(`${t('commands:emojis:button.label1')}`)
       .setCustomId('next')
       .setStyle(ButtonStyle.Secondary)
       .setEmoji('➡️')
       .setDisabled(false)
 
-    const backButton = new ButtonBuilder()
+    let backButton = new ButtonBuilder()
       .setLabel(`${t('commands:emojis:button.label2')}`)
       .setCustomId('back')
       .setStyle(ButtonStyle.Secondary)
       .setEmoji('⬅️')
       .setDisabled(true)
 
-    if (pages <= 1) ButtonBuilder.from(nextButton).setDisabled(true)
+    if (pages <= 1) nextButton = ButtonBuilder.from(nextButton).setDisabled(true)
 
     row.addComponents(backButton, nextButton)
 
@@ -86,34 +86,34 @@ module.exports = {
       .on('end', async (r, reason) => {
         if (reason != 'time') return
 
-        ButtonBuilder.from(nextButton).setDisabled(true)
-        ButtonBuilder.from(backButton).setDisabled(true)
+        nextButton = ButtonBuilder.from(nextButton).setDisabled(true)
+        backButton = ButtonBuilder.from(backButton).setDisabled(true)
 
         row.addComponents(backButton, nextButton)
 
         await interaction.editReply({
-          embeds: [embedEmoji.setAuthor(`${t('commands:emojis:time')}`)],
+          embeds: [embedEmoji.setAuthor({ name: `${t('commands:emojis:time')}` })],
           components: [row],
         })
       })
       .on('collect', async (r) => {
         switch (r.customId) {
           case 'next':
-            if (interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) if (actualPage === pages) return
+            if (interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.SendMessages)) if (actualPage === pages) return
 
             actualPage++
             paginatedItens = emojisArray.paginate(actualPage, 30)
             embedEmoji.setDescription(paginatedItens.join('\n'))
 
-            if (actualPage === pages && interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES))
-              ButtonBuilder.from(nextButton).setDisabled(true)
+            if (actualPage === pages && interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.SendMessages))
+            nextButton = ButtonBuilder.from(nextButton).setDisabled(true)
 
-            if (actualPage === pages && !interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) {
-              ButtonBuilder.from(nextButton).setDisabled(true)
-              ButtonBuilder.from(backButton).setDisabled(true)
+            if (actualPage === pages && !interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.SendMessages)) {
+              nextButton = ButtonBuilder.from(nextButton).setDisabled(true)
+              backButton = ButtonBuilder.from(backButton).setDisabled(true)
             }
 
-            ButtonBuilder.from(backButton).setDisabled(false)
+            backButton = ButtonBuilder.from(backButton).setDisabled(false)
 
             row = new ActionRowBuilder().addComponents(backButton, nextButton)
 
@@ -123,21 +123,21 @@ module.exports = {
             break
 
           case 'back': {
-            if (interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) if (actualPage === 1) return
+            if (interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.SendMessages)) if (actualPage === 1) return
 
             actualPage--
             paginatedItens = emojisArray.paginate(actualPage, 30)
             embedEmoji.setDescription(paginatedItens.join('\n'))
 
-            if (actualPage === 1 && interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES))
-              ButtonBuilder.from(backButton).setDisabled(true)
+            if (actualPage === 1 && interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.SendMessages))
+              backButton = ButtonBuilder.from(backButton).setDisabled(true)
 
-            if (actualPage === 1 && !interaction.guild.members.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) {
-              ButtonBuilder.from(nextButton).setDisabled(true)
-              ButtonBuilder.from(backButton).setDisabled(true)
+            if (actualPage === 1 && !interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.SendMessages)) {
+              nextButton = ButtonBuilder.from(nextButton).setDisabled(true)
+              backButton = ButtonBuilder.from(backButton).setDisabled(true)
             }
 
-            ButtonBuilder.from(nextButton).setDisabled(false)
+            nextButton = ButtonBuilder.from(nextButton).setDisabled(false)
 
             row = new ActionRowBuilder().addComponents(backButton, nextButton)
 

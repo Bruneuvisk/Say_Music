@@ -5,7 +5,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'seek',
-  description: 'Altera a posição da música que está sendo tocada em segundos',
+  description: '[🎵] Altera a posição da música que está sendo tocada em segundos',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

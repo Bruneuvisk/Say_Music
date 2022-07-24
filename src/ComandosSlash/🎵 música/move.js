@@ -4,7 +4,7 @@ const { arrayMove } = require('../../Struturas/Functions')
 
 module.exports = {
   name: 'move',
-  description: 'Troca a posição de uma música na fila pra outro posição',
+  description: '[🎵] Troca a posição de uma música na fila pra outro posição',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

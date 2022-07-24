@@ -5,7 +5,7 @@ const _ = require('lodash')
 
 module.exports = {
   name: 'list',
-  description: 'Lista as suas playlists que você possui em mim',
+  description: '[⚜️] Lista as suas playlists que você possui em mim',
   cooldown: 5,
   type: ApplicationCommandType.ChatInput,
   memberperm: ['SendMessages', 'UseApplicationCommands'],

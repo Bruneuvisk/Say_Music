@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'vibrato',
-  description: 'Ativa o efeito vibrato na música que esteja tocando',
+  description: '[👀] Ativa o efeito vibrato na música que esteja tocando',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

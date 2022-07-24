@@ -3,14 +3,8 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'addcurrentqueue',
-  description: 'Adiciona para sua playlist a fila de músicas que está sendo tocada atualmente',
+  description: '[⚜️] Adiciona para sua playlist a fila de músicas que está sendo tocada atualmente',
   cooldown: 5,
-  memberperm: ['SendMessages', 'UseApplicationCommands'],
-  clientperm: [
-    'EmbedLinks',
-    'SendMessages',
-    'UseApplicationCommands',
-  ],
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
     'EmbedLinks',

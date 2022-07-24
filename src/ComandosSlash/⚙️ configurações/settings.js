@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'settings',
-  description: 'Configura as configurações de música do bot',
+  description: '[⚙️] Configura as configurações de música do bot',
   cooldown: 10,
   memberperm: [
     'SendMessages',

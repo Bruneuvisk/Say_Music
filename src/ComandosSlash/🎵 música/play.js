@@ -5,7 +5,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'play',
-  description: 'Toco músicas para alegrar seus ouvidos',
+  description: '[🎵] Toco músicas para alegrar seus ouvidos',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

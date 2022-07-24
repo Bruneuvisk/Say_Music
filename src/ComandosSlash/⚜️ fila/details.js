@@ -5,7 +5,7 @@ const { paginateItens, format } = require('../../Struturas/Functions')
 
 module.exports = {
   name: 'details',
-  description: 'Exibe os detalhes da sua playlist em mim',
+  description: '[⚜️] Exibe os detalhes da sua playlist em mim',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

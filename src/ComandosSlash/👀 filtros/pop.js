@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'pop',
-  description: 'Ativa o efeito pop na música que esteja tocando',
+  description: '[👀] Ativa o efeito pop na música que esteja tocando',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

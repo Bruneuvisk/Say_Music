@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'loopqueue',
-  description: 'Faz a fila de músicas que está tocando se repetir várias vezes',
+  description: '[🎵] Faz a fila de músicas que está tocando se repetir várias vezes',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

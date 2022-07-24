@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'avatar',
-  description: 'Exibe o avatar de um membro',
+  description: '[📋] Exibe o avatar de um membro',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
@@ -96,7 +96,7 @@ module.exports = {
         .setLabel(`${t('commands:avatar:button.label2')}`)
 
       if (avatarGuild == null) {
-        ButtonBuilder.from(bnt2).setDisabled(true)
+        bnt2 = ButtonBuilder.from(bnt2).setDisabled(true)
         row = new ActionRowBuilder().addComponents(bnt1, bnt2)
       } else {
         row = new ActionRowBuilder().addComponents(bnt1, bnt2)
@@ -180,7 +180,7 @@ module.exports = {
         .setLabel(`${t('commands:avatar:button.label2')}`)
 
       if (avatarGuild == null) {
-        ButtonBuilder.from(bnt2).setDisabled(true)
+        bnt2 = ButtonBuilder.from(bnt2).setDisabled(true)
         row = new ActionRowBuilder().addComponents(bnt1, bnt2)
       } else {
         row = new ActionRowBuilder().addComponents(bnt1, bnt2)

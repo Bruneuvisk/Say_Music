@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'language',
-  description: 'Configura uma linguagem para seu servidor.',
+  description: '[⚙️] Configura uma linguagem para seu servidor.',
   cooldown: 10,
   memberperm: [
     'SendMessages',

@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'delete',
-  description: 'Deleta uma playlist que você tem em mim',
+  description: '[⚜️] Deleta uma playlist que você tem em mim',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

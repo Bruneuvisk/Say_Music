@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'create',
-  description: 'Cria uma playlist exclusiva sua em mim',
+  description: '[⚜️] Cria uma playlist exclusiva sua em mim',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

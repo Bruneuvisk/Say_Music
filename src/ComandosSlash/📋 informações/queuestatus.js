@@ -4,7 +4,7 @@ const { createBar } = require('../../Struturas/Functions')
 
 module.exports = {
   name: 'queuestatus',
-  description: 'Mostra os status da sua atual fila de músicas',
+  description: '[📋] Mostra os status da sua atual fila de músicas',
   cooldown: 10,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

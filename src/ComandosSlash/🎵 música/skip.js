@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'skip',
-  description: 'Pula a música que estava sendo tocada na sua fila de músicas',
+  description: '[🎵] Pula a música que estava sendo tocada na sua fila de músicas',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

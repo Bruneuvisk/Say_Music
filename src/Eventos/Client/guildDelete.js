@@ -1,6 +1,9 @@
 const config = require('../../Interfaces/config.json')
-const emojis = require('../../Interfaces/emojis.json')
-const { EmbedBuilder } = require('discord.js')
+const { EmbedBuilder, WebhookClient } = require('discord.js')
+const webhood_saida = new WebhookClient({
+  id: config.webhook_guilds.saida.id,
+  token: config.webhook_guilds.saida.token
+})
 const filterregions = {
   'en-US': '🇺🇸 | Estados Unidos',
   'en-GB': '🏴󠁧󠁢󠁥󠁮󠁧󠁿 | Inglaterra',
@@ -45,7 +48,7 @@ module.exports ={
     let owner = await client.users.fetch(guild.ownerId)
 
     let embedentrou = new EmbedBuilder()
-      .setTitle(`${emojis.emojisay} **Servidor removido!** ${emojis.emojisay}`)
+      .setTitle(`**Servidor removido!**`)
       .setDescription(
         `**\`📜\` Dados do servidor** \n\n \`🔌\` __Nome Do Servidor__: ${guild.name} \n \`👑\` __Dono do Servidor__: <@${
           guild.ownerId
@@ -57,8 +60,7 @@ module.exports ={
       )
       .setThumbnail(guild.iconURL({ dynamic: true }))
       .setColor(config.color)
-    let canalEnviar = client.guilds.cache.get('837089132206489602').channels.cache.get('982422427248259172')
-    canalEnviar.send({ embeds: [embedentrou] }).catch((error) => console.log('Promises rejected: ' + error))
+    webhood_saida.send({ username: `servidores`, embeds: [embedentrou] })
 
     var player = client.manager.players.get(guild.id)
     if (!player) return

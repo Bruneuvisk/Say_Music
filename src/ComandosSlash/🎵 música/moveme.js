@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'moveme',
-  description: 'Faz eu te mover para o canal de voz onde eu estou tocando',
+  description: '[🎵] Faz eu te mover para o canal de voz onde eu estou tocando',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

@@ -5,7 +5,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'playlist',
-  description: 'Faz eu tocar alguma playlist sua atráves do link da mesma',
+  description: '[🎵] Faz eu tocar alguma playlist sua atráves do link da mesma',
   cooldown: 15,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

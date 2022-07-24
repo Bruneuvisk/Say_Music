@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'volume',
-  description: 'Altera o volume da sua música de 0 a 150',
+  description: '[🎵] Altera o volume da sua música de 0 a 150',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

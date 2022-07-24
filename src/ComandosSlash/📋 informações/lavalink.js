@@ -7,7 +7,7 @@ require('moment-duration-format')
 
 module.exports = {
   name: 'lavalink',
-  description: 'Mostra as informações sobre meu lavalink conectado',
+  description: '[📋] Mostra as informações sobre meu lavalink conectado',
   cooldown: 10,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

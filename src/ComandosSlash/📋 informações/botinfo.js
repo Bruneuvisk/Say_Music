@@ -8,7 +8,7 @@ require('moment-duration-format')
 
 module.exports = {
   name: 'botinfo',
-  description: 'Exibe as informações minhas em geral no discord',
+  description: '[📋] Exibe as informações minhas em geral no discord',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

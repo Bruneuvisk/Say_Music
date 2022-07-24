@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'replay',
-  description: 'Coloca a música pra tocar do inicio',
+  description: '[🎵] Coloca a música pra tocar do inicio',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

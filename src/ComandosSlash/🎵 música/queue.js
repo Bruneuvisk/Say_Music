@@ -6,7 +6,7 @@ const { format } = require('../../Struturas/Functions')
 
 module.exports = {
   name: 'queue',
-  description: 'Lista a fila de músicas atual no servidor',
+  description: '[🎵] Lista a fila de músicas atual no servidor',
   cooldown: 15,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

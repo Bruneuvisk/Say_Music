@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'addcurrenttrack',
-  description: 'Adiciona para sua playlist a música que está sendo tocada atualmente',
+  description: '[⚜️] Adiciona para sua playlist a música que está sendo tocada atualmente',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

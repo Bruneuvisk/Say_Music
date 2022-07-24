@@ -4,7 +4,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'search',
-  description: 'Pesquisa alguma música no yotube para ser adicionada na sua fila de músicas',
+  description: '[📋] Pesquisa alguma música no yotube para ser adicionada na sua fila de músicas',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

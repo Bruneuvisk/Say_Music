@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'skipto',
-  description: 'Pula para uma determinada música que esteja na fila',
+  description: '[🎵] Pula para uma determinada música que esteja na fila',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'unshuffle',
-  description: 'Restaura a sua antiga fila de músicas que foi embaralhada',
+  description: '[🎵] Restaura a sua antiga fila de músicas que foi embaralhada',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

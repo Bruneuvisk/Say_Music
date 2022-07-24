@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'leave',
-  description: 'Faz eu sair do canal de voz me desconectando',
+  description: '[🎵] Faz eu sair do canal de voz me desconectando',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

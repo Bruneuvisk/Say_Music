@@ -3,7 +3,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'forward',
-  description: 'Avança a música para uma determinada quantidade de tempo',
+  description: '[🎵] Avança a música para uma determinada quantidade de tempo',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

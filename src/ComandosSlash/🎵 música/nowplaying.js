@@ -5,7 +5,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'nowplaying',
-  description: 'Exibe informações da música que está sendo tocada atualmente',
+  description: '[🎵] Exibe informações da música que está sendo tocada atualmente',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

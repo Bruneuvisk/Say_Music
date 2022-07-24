@@ -6,7 +6,7 @@ const { paginateItens } = require('../../Struturas/Functions')
 
 module.exports = {
   name: 'lyrics',
-  description: 'Exibe a letra da música que queira ou a que está sendo tocada',
+  description: '[🎵] Exibe a letra da música que queira ou a que está sendo tocada',
   cooldown: 10,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

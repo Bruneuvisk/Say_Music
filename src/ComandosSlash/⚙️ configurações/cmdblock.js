@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'cmdblock',
-  description: 'Define se você quer boquear comandos, ou adicionar canais para o bot',
+  description: '[⚙️] Define se você quer boquear comandos, ou adicionar canais para o bot',
   cooldown: 10,
   memberperm: [
     'SendMessages',

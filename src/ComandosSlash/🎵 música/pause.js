@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'pause',
-  description: 'Pausa a música que está sendo tocada atualmente',
+  description: '[🎵] Pausa a música que está sendo tocada atualmente',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

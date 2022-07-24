@@ -3,7 +3,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'rewind',
-  description: 'Procura uma quantidade específica de segundos para trás, para voltar a sua música',
+  description: '[🎵] Procura uma quantidade específica de segundos para trás, para voltar a sua música',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

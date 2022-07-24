@@ -4,7 +4,7 @@ const prettyMilliseconds = require('pretty-ms')
 
 module.exports = {
   name: 'grab',
-  description: 'Salva a música que está sendo tocada na suas mensagens diretas no discord',
+  description: '[🎵] Salva a música que está sendo tocada na suas mensagens diretas no discord',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

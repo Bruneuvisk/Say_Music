@@ -10,7 +10,7 @@ const levelbooster = {
 
 module.exports = {
   name: 'serverinfo',
-  description: 'Exibe as informações sobre o servidor no qual foi feito o comando',
+  description: '[📋] Exibe as informações sobre o servidor no qual foi feito o comando',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

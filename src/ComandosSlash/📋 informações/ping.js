@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'ping',
-  description: 'Demonstra a Latência e a API sobre mim',
+  description: '[📋] Demonstra a Latência e a API sobre mim',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

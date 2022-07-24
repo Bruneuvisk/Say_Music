@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'join',
-  description: 'Faz eu entrar num canal de voz para tocar músicas pra você',
+  description: '[🎵] Faz eu entrar num canal de voz para tocar músicas pra você',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

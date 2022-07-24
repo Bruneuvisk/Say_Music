@@ -2,7 +2,7 @@ const { PermissionsBitField, ButtonBuilder, ButtonStyle, MessageActionRow, Appli
 
 module.exports = {
   name: 'clearqueue',
-  description: 'Limpa a fila de músicas que está sendo tocada no servidor',
+  description: '[📋] Limpa a fila de músicas que está sendo tocada no servidor',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

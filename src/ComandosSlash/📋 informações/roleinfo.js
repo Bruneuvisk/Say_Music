@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'roleinfo',
-  description: 'Exibe as informações sobre um cargo citado',
+  description: '[📋] Exibe as informações sobre um cargo citado',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

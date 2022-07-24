@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'removetrack',
-  description: 'Remove uma música da sua fila de músicas',
+  description: '[🎵] Remove uma música da sua fila de músicas',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

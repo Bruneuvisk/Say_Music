@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'channelinfo',
-  description: 'Exibe as informações sobre o canal citado',
+  description: '[📋] Exibe as informações sobre o canal citado',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

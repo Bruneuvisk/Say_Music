@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'shuffle',
-  description: 'Embaralha a fila de músicas na qual está sendo tocada',
+  description: '[🎵] Embaralha a fila de músicas na qual está sendo tocada',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

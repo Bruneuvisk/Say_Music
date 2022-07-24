@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'treblebass',
-  description: 'Ativa o efeito treblebass na música que esteja tocando',
+  description: '[👀] Ativa o efeito treblebass na música que esteja tocando',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

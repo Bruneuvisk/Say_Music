@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'userinfo',
-  description: 'Exibe as informações de um usuário',
+  description: '[📋] Exibe as informações de um usuário',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

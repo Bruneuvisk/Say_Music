@@ -4,7 +4,7 @@ const { TrackUtils } = require('erela.js')
 
 module.exports = {
   name: 'load',
-  description: 'Coloca alguma playlist sua pra tocar no servidor',
+  description: '[⚜️] Coloca alguma playlist sua pra tocar no servidor',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

@@ -18,6 +18,16 @@
     "clientID": "fefacabcec2a442095b0b812b0f96fa9",
     "clientSecret": "bc1dcda9fccc4d7997738ffef7a3875e"
   },
+  "webhook_guilds": {
+    "entrada": {
+      "id": "1000893417913589870",
+      "token": "b0oWt6lluzj16R62okNmed-H0qK3FucbsXg3mMNiMVGEIk8oS7_UI4G-mC6mzkeCkxTq"
+    },
+    "saida":{
+      "id": "1000894432343773264",
+      "token": "ncvCG8O7G4vyj3ytPIVrb7Z4ZtXXQ59gRoJH71rDMGOli1FZO73XOUlYHfbrYNBtCtl3"
+    }
+  },
   "nodesPlayer": {
     "erelaid": "Node 2",
     "erelahost": "localhost",

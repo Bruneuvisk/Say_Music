@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'resume',
-  description: 'Despausa a música que estava pausada atualmente',
+  description: '[🎵] Despausa a música que estava pausada atualmente',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

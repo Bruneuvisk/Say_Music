@@ -3,7 +3,7 @@ const EmbedSay = require('../../Struturas/EmbedSay')
 
 module.exports = {
   name: 'removesong',
-  description: 'Removi uma música da sua playlist que foi selecionada',
+  description: '[⚜️] Removi uma música da sua playlist que foi selecionada',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [

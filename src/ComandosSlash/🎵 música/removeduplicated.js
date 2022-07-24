@@ -2,7 +2,7 @@ const { PermissionsBitField, SelectMenuBuilder, MessageActionRow, ApplicationCom
 
 module.exports = {
   name: 'removeduplicated',
-  description: 'Remove todos as músicas duplicadas em sua fila de músicas',
+  description: '[🎵] Remove todos as músicas duplicadas em sua fila de músicas',
   cooldown: 5,
   memberperm: ['SendMessages', 'UseApplicationCommands'],
   clientperm: [
